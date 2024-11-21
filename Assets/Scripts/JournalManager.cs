@@ -1,18 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JournalManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Keep Info about the currently clicked tab
+    public JournalState currJournalState = JournalState.NPC;
+    
+    public Button NPC_btn, Clue_btn;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetButtonAsPerCurrJournalState()
     {
+        RectTransform NPCRectTransform = NPC_btn.GetComponent<RectTransform>();
+        RectTransform ClueRectTransform = Clue_btn.GetComponent<RectTransform>();
+        int height = 135, smallWidth = 145, largeWidth = 180;
         
+        if (currJournalState == JournalState.NPC)
+        {
+            Debug.Log("Setting up NPC Journal State!");
+            NPCRectTransform.sizeDelta = new Vector2(largeWidth, height);
+            ClueRectTransform.sizeDelta = new Vector2(smallWidth, height);
+        }
+        else
+        {
+            Debug.Log("Setting up Clue Journal State!");
+            NPCRectTransform.sizeDelta = new Vector2(smallWidth, height);
+            ClueRectTransform.sizeDelta = new Vector2(largeWidth, height);
+        }
     }
+
+    public void SetJournalState(int state)
+    {
+        Debug.Log("State Value: " + state);
+        switch( (JournalState)state ) // use upcast, where 0 - first, 1 - second...
+        {
+            case(JournalState.NPC):
+                currJournalState = JournalState.NPC;
+                break;
+            case(JournalState.Clue):
+                currJournalState = JournalState.Clue;
+                break;
+        }
+        Debug.Log("Curr Enum: " + currJournalState);
+        SetButtonAsPerCurrJournalState();
+    }
+}
+
+[Serializable]
+public enum JournalState
+{
+    NPC, Clue
 }

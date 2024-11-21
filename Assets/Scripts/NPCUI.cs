@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class NPCUI : UIScreen
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public JournalManager journal;
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void OnEnable()
     {
-        
+        journal.currJournalState = JournalState.NPC;
     }
 }

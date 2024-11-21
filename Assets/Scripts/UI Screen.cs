@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIScreen : MonoBehaviour
 {
+    
     public void Activate()
     {
         gameObject.SetActive(true);
