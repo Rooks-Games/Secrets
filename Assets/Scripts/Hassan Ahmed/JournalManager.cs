@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +10,26 @@ public class JournalManager : MonoBehaviour
     public JournalState currJournalState = JournalState.NPC;
     
     public Button NPC_btn, Clue_btn;
+    
+    List<UIScreen> allScreens = new List<UIScreen>();
+    
+    Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
 
-    private void Start()
+    public void AddToUIStack(UIScreen uiScreen)
     {
-        
+        UIScreenStack.Push(uiScreen);
     }
 
+    public void RemoveFromUIStack(UIScreen uiScreen)
+    {
+        UIScreenStack.Pop();
+    }
+
+    public void AddToAllScreens(UIScreen uiScreen)
+    {
+        allScreens.Add(uiScreen);
+    }
+    
     public void SetButtonAsPerCurrJournalState()
     {
         RectTransform NPCRectTransform = NPC_btn.GetComponent<RectTransform>();
