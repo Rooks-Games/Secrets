@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class DialogueNpcUI : MonoBehaviour
 {
