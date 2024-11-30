@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Scripts.Npcs
 {
-    public enum NpcType
+    public enum NpcId
     {
         Undefined,
+        Player,
         Blacksmith,
         Innkeeper,
         Captain,

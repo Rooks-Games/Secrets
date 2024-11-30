@@ -7,6 +7,6 @@ namespace Scripts.Npcs
     [CreateAssetMenu(fileName = "NpcDatabase", menuName = "ScriptableObjects/NpcDatabase")]
     public class NpcDatabase : ScriptableObject
     {
-        [Serialize] public List<NpcData> NpcsData;
+        [Serialize] public List<NpcMetaData> NpcsData;
     }
 }

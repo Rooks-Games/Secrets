@@ -1,16 +1,21 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Scripts.Npcs
 {
-    [System.Serializable]
     public class NpcData
     {
-        public NpcType Type;
-        public Sprite Image;
-        public string Name;
-        public string Description;
-        public string DialogueTreeId;
+        public int Loyalty;
+        
+        private NpcMetaData _npcMetaData;
+        public NpcId id => _npcMetaData.id;
+        public Sprite Image => _npcMetaData.Image;
+        public string Name => _npcMetaData.Name;
+        public string Description => _npcMetaData.Description;
+        public string DialogueTreeId => _npcMetaData.DialogueTreeId;
+        
+        public NpcData(NpcMetaData npcMetaData)
+        {
+            _npcMetaData = npcMetaData;
+        }
     }
 }
