@@ -7,7 +7,7 @@ namespace Scripts.DialogueSystem
     [CreateAssetMenu(fileName = "DialogueTree", menuName = "ScriptableObjects/DialogueTree")]
     public class DialogueTree : ScriptableObject
     {
-        public readonly string Id;
-        [Serialize] public readonly List<DialogueEntry> DialogueEntries;
+        public string Id;
+        [Serialize] public List<DialogueEntry> DialogueEntries;
     }
 }

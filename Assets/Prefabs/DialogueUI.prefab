@@ -426,6 +426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d556d030c45e764faec38e344fbc11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dependencies:
+    DialogueDatabase: {fileID: 11400000, guid: dbe95ca4b8367804a93ee4c84b4d065f, type: 2}
 --- !u!114 &7027702069119315385
 MonoBehaviour:
   m_ObjectHideFlags: 0

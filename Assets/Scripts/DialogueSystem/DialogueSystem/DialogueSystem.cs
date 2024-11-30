@@ -6,16 +6,15 @@ namespace Scripts.DialogueSystem
 {
     public class DialogueSystem : MonoBehaviour
     {
+        [SerializeField] private DialogueDependencies _dependencies;
         private DialogueUI _dialogueUI;
-        private DialogueDependencies _dependencies;
         private DialogueController _dialogueController;
 
         public event Action ConversationStarted;
         public event Action ConversationEnded;
 
-        public void Init(DialogueDependencies dependencies)
+        public void Init()
         {
-            _dependencies = dependencies;
             _dialogueController = new DialogueController(_dependencies);
             _dialogueUI = GetComponent<DialogueUI>();
             _dialogueUI.Init(_dependencies);
