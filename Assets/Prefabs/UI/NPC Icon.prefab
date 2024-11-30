@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcType: 0
+  charImage: {fileID: 3059456975610763776}
+  charName: {fileID: 4025362476601312020}
 --- !u!1 &7298255007712185252
 GameObject:
   m_ObjectHideFlags: 0

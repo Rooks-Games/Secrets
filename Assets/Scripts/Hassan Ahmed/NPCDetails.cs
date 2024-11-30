@@ -1,7 +1,9 @@
 
+using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[Serializable]
 public class NpcDetails
 {
     public string NpcName;

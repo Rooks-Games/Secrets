@@ -6,15 +6,30 @@ using UnityEngine.UI;
 
 public class JournalManager : MonoBehaviour
 {
+    public static JournalManager Instance; 
+    
     //Keep Info about the currently clicked tab
     public JournalState currJournalState = JournalState.NPC;
     
     public Button NPC_btn, Clue_btn;
     
-    List<UIScreen> allScreens = new List<UIScreen>();
+    public List<UIScreen> allScreens = new List<UIScreen>();
     
     Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void ActivateNPCIconPage()
+    {
+        AddToUIStack(gameObject.GetComponent<UIScreen>());
+    }
+    
     public void AddToUIStack(UIScreen uiScreen)
     {
         UIScreenStack.Push(uiScreen);
@@ -41,6 +56,7 @@ public class JournalManager : MonoBehaviour
             Debug.Log("Setting up NPC Journal State!");
             NPCRectTransform.sizeDelta = new Vector2(largeWidth, height);
             ClueRectTransform.sizeDelta = new Vector2(smallWidth, height);
+            allScreens[0].gameObject.SetActive(true);
         }
         else
         {
