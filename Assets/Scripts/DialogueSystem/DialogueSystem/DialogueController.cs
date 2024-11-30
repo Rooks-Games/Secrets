@@ -76,7 +76,7 @@ namespace Scripts.DialogueSystem
         private void ResetDialogue()
         {
             _activeDialogueTreeId = "";
-            _activeDialoguesList.Clear();
+            _activeDialoguesList?.Clear();
         }
 
         private List<DialogueEntry> GetFilteredChildEntries(int parentEntryId)
@@ -163,7 +163,7 @@ namespace Scripts.DialogueSystem
                 Dictionary<int, DialogueEntry> dialogueEntries = new Dictionary<int, DialogueEntry>();
                 for (int j = 0; j < dialogueTree.DialogueEntries.Count; j++)
                 {
-                    dialogueEntries.Add(dialogueTree.DialogueEntries[i].DialogueID, dialogueTree.DialogueEntries[i]);
+                    dialogueEntries.Add(dialogueTree.DialogueEntries[j].DialogueID, dialogueTree.DialogueEntries[j]);
                 }
                 _dialogueData.Add(dialogueTree.Id, dialogueEntries);
             }
