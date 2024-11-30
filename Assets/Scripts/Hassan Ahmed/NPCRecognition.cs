@@ -8,23 +8,15 @@ using UnityEngine.UI;
 
 public class NPCRecognition : MonoBehaviour
 {
-    Button thisNPC;
-    public NpcList npcType;
-    
+    [SerializeField] Button thisNPC;
     public Image charImage;
     public TMP_Text charName;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        charImage = GetComponentInChildren<Image>();
-        charName = GetComponentInChildren<TMP_Text>();
-        
-        thisNPC = GetComponent<Button>();
-    }
+    
+    public NpcList npcType;
 
     public void BtnAddListener(UnityAction btnAction)
     {
+        gameObject.name = Enum.GetName(typeof(NpcList), npcType) ?? string.Empty;
         thisNPC.onClick.AddListener(btnAction);
     }
 

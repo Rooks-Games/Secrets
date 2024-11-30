@@ -1,9 +1,11 @@
 
+using System;
+
+[Serializable]
 public class ClueDetails
 {
     public string ClueName;
     public string ClueDescription;
-    public string ClueHints;
-    public NpcDetails BelongsTo;
-
+    public NpcDetails BelongsTo = new NpcDetails();
+    public bool FoundORNotFound = false;
 }

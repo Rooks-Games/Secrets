@@ -17,7 +17,7 @@ public class AllNPCSelectionPage : UIScreen
 
         for (int i = 0; i < listOfNPCs.Count; i++)
         {
-            SetUIScreens(listOfNPCs[i].npcType, listOfNPCs[i], i);
+            SetUIScreens(listOfNPCs[i], i);
         }
     }
 
@@ -26,7 +26,7 @@ public class AllNPCSelectionPage : UIScreen
         journal.ActivateNPCIconPage();
     }
 
-    public void SetUIScreens(NpcList npcObj, NPCRecognition npcRecognitionObject, int indexInList)
+    public void SetUIScreens(NPCRecognition npcRecognitionObject, int indexInList)
     {
         NPCDetailsSetter setterForCurrentNPC = null;
         NpcDetails npcDetails = new();
@@ -34,60 +34,25 @@ public class AllNPCSelectionPage : UIScreen
         GameObject NPCPageSpawned = Instantiate(NPCPagePrefab, MainJournalBG.transform);
         NPCPageSpawned.SetActive(false);
         
-        switch (npcObj)
-        {
-            case NpcList.Blacksmith:
-                //Link the page to be opened in here!
-                NPCPageSpawned.name = $"{npcDetails.NpcName}_NPCPage";
+        NPCPageSpawned.name = $"{npcDetails.NpcName}_NPCPage";
                 
-                //Setup NPC Details object
-                npcDetails = allNpcDetails[indexInList];
+        //Setup NPC Details object
+        npcDetails = allNpcDetails[indexInList];
                 
-                setterForCurrentNPC = NPCPageSpawned.GetComponent<NPCDetailsSetter>();
-                setterForCurrentNPC.DataSetter(npcDetails);
+        setterForCurrentNPC = NPCPageSpawned.GetComponent<NPCDetailsSetter>();
+        setterForCurrentNPC.DataSetter(npcDetails);
 
-                npcRecognitionObject.charName.text = npcDetails.NpcName;
-                npcRecognitionObject.charImage = npcDetails.NpcIcon;
-                npcRecognitionObject.BtnAddListener(() =>
-                {
-                    NPCPageSpawned.SetActive(true);
-                    journal.AddToUIStack(NPCPageSpawned.GetComponent<UIScreen>());
-                });
+        npcRecognitionObject.charName.text = npcDetails.NpcName;
+        npcRecognitionObject.charImage = npcDetails.NpcIcon;
+        npcRecognitionObject.npcType = npcDetails.NpcIdentifier;
+        npcRecognitionObject.BtnAddListener(() =>
+        {
+            NPCPageSpawned.SetActive(true);
+            journal.AddToUIStack(NPCPageSpawned.GetComponent<UIScreen>());
+        });
                 
-                allNPCsPages.Add(NPCPageSpawned);
-                JournalManager.Instance.allScreens.Add(setterForCurrentNPC);
-                break;
-            case NpcList.Baker:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.Herbalist:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.InKeeper:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.Priest:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.Farmer:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.Merchant:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.Scholar:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.TownChief:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.TownCrier:
-                //Link the page to be opened in here!
-                break;
-            case NpcList.TownGuard:
-                //Link the page to be opened in here!
-                break;
-        }
+        allNPCsPages.Add(NPCPageSpawned);
+        JournalManager.Instance.allScreens.Add(setterForCurrentNPC);
     }
 }
 

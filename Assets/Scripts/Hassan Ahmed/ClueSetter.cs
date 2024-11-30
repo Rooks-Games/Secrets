@@ -5,11 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 
-public class ClueSetter : MonoBehaviour
+public class ClueSetter : UIScreen
 {
     [SerializeField] private TMP_Text clueName;
     [SerializeField] private TMP_Text clueDescription;
-    [SerializeField] private TMP_Text clueHints;
     
     [SerializeField] Image questionMarkImage;
     [SerializeField] private Button cluePageButton;
@@ -24,6 +23,5 @@ public class ClueSetter : MonoBehaviour
     {
         clueName.text = currentClueDetails.ClueName;
         clueDescription.text = currentClueDetails.ClueDescription;
-        clueHints.text = currentClueDetails.ClueHints;
     }
 }

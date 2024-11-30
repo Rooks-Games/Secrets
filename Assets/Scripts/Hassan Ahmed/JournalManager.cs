@@ -17,6 +17,9 @@ public class JournalManager : MonoBehaviour
     
     Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
 
+    public bool ActivateClueWithPlus = false;
+    
+
     private void Awake()
     {
         if (Instance == null)
@@ -63,6 +66,7 @@ public class JournalManager : MonoBehaviour
             Debug.Log("Setting up Clue Journal State!");
             NPCRectTransform.sizeDelta = new Vector2(smallWidth, height);
             ClueRectTransform.sizeDelta = new Vector2(largeWidth, height);
+            allScreens[1].gameObject.SetActive(true);
         }
     }
 

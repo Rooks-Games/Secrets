@@ -10,7 +10,13 @@ public class NpcDetails
     public Image NpcIcon;
     public string NpcDescription;
 
-    public List<ClueDetails> AttachedClues = new();
+    public List<ClueDetails> CorrectClues = new();
+    public List<ClueDetails> AddedClues = new();
 
+    //Loyalty = 0 = neutral
+    //Loyalty  = 1 = Loyal To Us
+    //Loyalty = -1 = Not Loyal To Us
+    public int Loyalty = 0;
+    
     public NpcList NpcIdentifier;
 }
