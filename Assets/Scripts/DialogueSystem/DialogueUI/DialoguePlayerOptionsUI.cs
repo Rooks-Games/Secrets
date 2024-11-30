@@ -19,6 +19,7 @@ public class DialoguePlayerOptionsUI : MonoBehaviour
     
     public void ShowPlayerOptions(List<DialogueEntry> options)
     {
+        _optionButtons = new List<DialoguePlayerOptionButton>();
         for (int i = 0; i < options.Count; i++) 
         {
             DialoguePlayerOptionButton button = Instantiate(_optionButtonPrefab, _optionParent);
@@ -33,7 +34,7 @@ public class DialoguePlayerOptionsUI : MonoBehaviour
         {
             Destroy(_optionButtons[i].gameObject);
         }
-        _optionButtons.Clear();
+        _optionButtons?.Clear();
         ContinueDialogueFromEntry?.Invoke(dialogueId);
     }
 }

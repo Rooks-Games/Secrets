@@ -10,7 +10,7 @@ namespace Scripts.DialogueSystem
         private List<DialogueEntry> _activeDialoguesList;
         private string _activeDialogueTreeId;
         
-        public List<DialogueEntry> CurrentPossibleDialoguesList;
+        public List<DialogueEntry> CurrentPossibleDialoguesList => _activeDialoguesList;
         
         private Dictionary<int, DialogueEntry> _activeDialogueTree => _dialogueData[_activeDialogueTreeId];
 

@@ -16,8 +16,8 @@ namespace Scripts.DialogueSystem
         {
             _dependencies = dialogueDependencies;
             _dialogueNpcUI.Init(dialogueDependencies);
-            _dialogueNpcUI.ContinueDialogueFromEntry = ContinueDialogueFromEntry;
-            _dialoguePlayerOptionsUI.ContinueDialogueFromEntry = ContinueDialogueFromEntry;
+            _dialogueNpcUI.ContinueDialogueFromEntry = ContinueDialogueFrom;
+            _dialoguePlayerOptionsUI.ContinueDialogueFromEntry = ContinueDialogueFrom;
         }
 
         public void ShowNpcDialogue(DialogueEntry dialogueEntry)
@@ -42,6 +42,11 @@ namespace Scripts.DialogueSystem
         public void HideDialogueUI()
         {
             gameObject.SetActive(false);
+        }
+
+        public void ContinueDialogueFrom(int dialogueId)
+        {
+            ContinueDialogueFromEntry?.Invoke(dialogueId);
         }
     }
 }

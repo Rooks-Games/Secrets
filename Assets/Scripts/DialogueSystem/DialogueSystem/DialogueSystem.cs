@@ -23,7 +23,7 @@ namespace Scripts.DialogueSystem
         
         public bool StartConversation(string npcId)
         {
-            if (_dialogueController.StartDialogue(npcId))
+            if (!_dialogueController.StartDialogue(npcId))
             {
                 return false;
             }
