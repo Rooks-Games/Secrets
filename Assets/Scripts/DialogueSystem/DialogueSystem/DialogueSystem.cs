@@ -13,7 +13,7 @@ namespace Scripts.DialogueSystem
         public event Action ConversationStarted;
         public event Action ConversationEnded;
 
-        public void Init()
+        public void Start()
         {
             _dialogueController = new DialogueController(_dependencies);
             _dialogueUI = GetComponent<DialogueUI>();
