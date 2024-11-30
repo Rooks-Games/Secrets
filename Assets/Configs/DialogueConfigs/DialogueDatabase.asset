@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880c0c2b12b5abc458bb30d7632d8daf, type: 3}
   m_Name: DialogueDatabase
   m_EditorClassIdentifier: 
-  DialogueTrees: []
+  NpcIds:
+  - test
+  DialogueTrees:
+  - {fileID: 11400000, guid: 6b49455331d811341958f91fd115b62b, type: 2}

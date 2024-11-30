@@ -19,6 +19,7 @@ namespace Scripts.DialogueSystem
             _dialogueUI = GetComponent<DialogueUI>();
             _dialogueUI.Init(_dependencies);
             _dialogueUI.ContinueDialogueFromEntry = ContinueConversation;
+            StartConversation("test");
         }
         
         public bool StartConversation(string npcId)
