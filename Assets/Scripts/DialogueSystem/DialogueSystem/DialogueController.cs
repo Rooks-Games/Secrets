@@ -132,10 +132,10 @@ namespace Scripts.DialogueSystem
                 return filteredEntriesList;
             }
 
-            string currentSpeaker = entries[0].speaker;
+            bool isPlayerOption = entries[0].IsPlayerOption;
             for (int i = 0; i < entries.Count; i++)
             {
-                if (entries[i].speaker == currentSpeaker)
+                if (entries[i].IsPlayerOption == isPlayerOption)
                 {
                     filteredEntriesList.Add(entries[i]);   
                 }

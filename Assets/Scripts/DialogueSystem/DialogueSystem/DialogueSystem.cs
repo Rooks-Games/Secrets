@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Scripts.Npcs;
 using UnityEngine;
 
 namespace Scripts.DialogueSystem
@@ -19,6 +20,12 @@ namespace Scripts.DialogueSystem
             _dialogueUI = GetComponent<DialogueUI>();
             _dialogueUI.Init(_dependencies);
             _dialogueUI.ContinueDialogueFromEntry = ContinueConversation;
+            StartConversation("test");
+        }
+        
+        public bool StartConversationWith(NpcId npc)
+        {
+            return StartConversation(_dependencies.NpcDataProvider.NpcsData[npc].DialogueTreeId);
         }
         
         public bool StartConversation(string npcId)
