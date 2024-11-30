@@ -9,7 +9,6 @@ namespace Scripts.DialogueSystem
         private DialogueHelper _dialogueHelper;
         private List<DialogueEntry> _activeDialoguesList;
         private string _activeDialogueTreeId;
-        private int _activeDialogueEntryId;
         
         public List<DialogueEntry> CurrentPossibleDialoguesList;
         
@@ -31,36 +30,24 @@ namespace Scripts.DialogueSystem
             }
             
             _activeDialogueTreeId = dialogueTreeId;
-            _activeDialogueEntryId = 0;
-            _activeDialoguesList = new List<DialogueEntry> { GetDialogue(_activeDialogueEntryId) };
+            _activeDialoguesList = new List<DialogueEntry> { GetDialogue(0) };
 
             if (_activeDialoguesList.Count == 1 && !_activeDialoguesList[0].SkipDialogue)
             {
                 return true;
             }
 
-            return ContinueDialogue();
-        }
-        
-        public void ContinueAfterDialogueEntry(int dialogueId)
-        {
-            SelectDialogue(dialogueId);
-            ContinueDialogue();
+            return ContinueDialogue(_activeDialoguesList[0].DialogueID);
         }
 
-        public void SelectDialogue(int dialogueId)
+        public bool ContinueDialogue(int dialogueId)
         {
-            _activeDialogueEntryId = dialogueId;
-        }
-
-        public bool ContinueDialogue()
-        {
-            if (_activeDialogueTreeId == "" || _activeDialogueEntryId == -1)
+            if (_activeDialogueTreeId == "" || dialogueId == -1)
             {
                 return false;
             }
 
-            List<DialogueEntry> nextEntries = GetFilteredChildEntries(_activeDialogueEntryId);
+            List<DialogueEntry> nextEntries = GetFilteredChildEntries(dialogueId);
             if (nextEntries.Count == 0)
             {
                 ResetDialogue();
@@ -69,7 +56,7 @@ namespace Scripts.DialogueSystem
 
             while (nextEntries[0].SkipDialogue)
             {
-                nextEntries = GetFilteredChildEntries(_activeDialogueEntryId);
+                nextEntries = GetFilteredChildEntries(dialogueId);
                 if (nextEntries.Count == 0)
                 {
                     ResetDialogue();
@@ -89,19 +76,21 @@ namespace Scripts.DialogueSystem
         private void ResetDialogue()
         {
             _activeDialogueTreeId = "";
-            _activeDialogueEntryId = -1;
             _activeDialoguesList.Clear();
-        }
-        
-        private void GotoDialogue(int dialogueEntryId)
-        {
-            _activeDialogueEntryId = dialogueEntryId;
         }
 
         private List<DialogueEntry> GetFilteredChildEntries(int parentEntryId)
         {
-            List<DialogueEntry> nextEntries = GetChildEntries(_activeDialogueEntryId);
-            return FilterEntries(nextEntries);
+            List<DialogueEntry> nextEntries = GetChildEntries(parentEntryId);
+            List<DialogueEntry> filteredEntries = FilterEntries(nextEntries);
+            
+            List<DialogueEntry> finalEntries = filteredEntries;
+            if (filteredEntries.Count >= 1 && !filteredEntries[0].IsPlayerOption)
+            {
+                finalEntries = new List<DialogueEntry> { filteredEntries[0] };
+            }
+
+            return finalEntries;
         }
         
         private List<DialogueEntry> GetChildEntries(int parentEntryId)

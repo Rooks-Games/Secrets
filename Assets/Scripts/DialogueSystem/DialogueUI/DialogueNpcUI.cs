@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Scripts.DialogueSystem;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class DialogueNpcUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Image _npcImage;
+    [SerializeField] private TMP_Text _dialogueText;
+    [SerializeField] private Button _dialogueBox;
+    
+    private DialogueEntry _currentDialogue;
+    private DialogueDependencies _dependencies;
+    
+    public Action<int> ContinueDialogueFromEntry;
+    
+    public void Init(DialogueDependencies dialogueDependencies)
     {
-        
+        _dependencies = dialogueDependencies;
+        _dialogueBox.onClick.AddListener(ContinueDialogue);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void ShowDialogue(DialogueEntry dialogue)
     {
-        
+        _currentDialogue = dialogue;
+        _dialogueText.SetText(_currentDialogue.DialogueText);
+    }
+    
+    public void ContinueDialogue()
+    {
+        ContinueDialogueFromEntry?.Invoke(_currentDialogue.DialogueID);
     }
 }

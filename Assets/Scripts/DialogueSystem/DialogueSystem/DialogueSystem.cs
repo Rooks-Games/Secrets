@@ -1,14 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Scripts.DialogueSystem
 {
     public class DialogueSystem : MonoBehaviour
     {
-        [SerializeField] private DialogueUI _dialogueUIPrefab;
-        
         private DialogueUI _dialogueUI;
         private DialogueDependencies _dependencies;
         private DialogueController _dialogueController;
@@ -20,6 +17,9 @@ namespace Scripts.DialogueSystem
         {
             _dependencies = dependencies;
             _dialogueController = new DialogueController(_dependencies);
+            _dialogueUI = GetComponent<DialogueUI>();
+            _dialogueUI.Init(_dependencies);
+            _dialogueUI.ContinueDialogueFromEntry = ContinueConversation;
         }
         
         public bool StartConversation(string npcId)
@@ -30,14 +30,14 @@ namespace Scripts.DialogueSystem
             }
             
             ConversationStarted?.Invoke();
-            //Show UI
+            _dialogueUI.ShowDialogueUI();
             ShowCurrentDialogue();
             return true;
         }
 
-        private void ContinueConversation()
+        private void ContinueConversation(int currentDialogueId)
         {
-            if (_dialogueController.ContinueDialogue())
+            if (_dialogueController.ContinueDialogue(currentDialogueId))
             {
                 ShowCurrentDialogue();
                 return;
@@ -48,7 +48,7 @@ namespace Scripts.DialogueSystem
 
         private void EndConversation()
         {
-            //Hide UI
+            _dialogueUI.HideDialogueUI();
             ConversationEnded?.Invoke();
         }
 
@@ -57,10 +57,12 @@ namespace Scripts.DialogueSystem
             List<DialogueEntry> possibleDialogueEntries = _dialogueController.CurrentPossibleDialoguesList;
             if (possibleDialogueEntries[0].IsPlayerOption)
             {
-                
+                _dialogueUI.ShowPlayerOptions(possibleDialogueEntries);
             }
-            
-            //Show Dialogue
+            else
+            {
+                _dialogueUI.ShowNpcDialogue(possibleDialogueEntries[0]);
+            }
         }
     }
 }
