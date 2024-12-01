@@ -72,7 +72,7 @@ namespace Scripts.Player
                 Interact();
             }
 
-            if (_movement.magnitude>0)
+            if (_movement.magnitude > 0 && !_isInDialogue)
             {
                 _animator.SetTrigger("Walk");
             }
