@@ -29,6 +29,7 @@ namespace Scripts.Player
 
         private void ConversationStarted()
         {
+            _movement = Vector2.zero;
             _animator.SetTrigger("Idle");
             _isInDialogue = true;
         }
