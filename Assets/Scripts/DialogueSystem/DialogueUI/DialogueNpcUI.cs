@@ -1,5 +1,6 @@
 using System;
 using Scripts.DialogueSystem;
+using Scripts.Npcs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -27,6 +28,8 @@ public class DialogueNpcUI : MonoBehaviour
     {
         _currentDialogue = dialogue;
         _dialogueText.SetText(_currentDialogue.DialogueText);
+        NpcData npcData = _dependencies.NpcDataProvider.NpcsData[dialogue.NpcId];
+        _npcImage.sprite = npcData.Image;
     }
     
     public void ContinueDialogue()

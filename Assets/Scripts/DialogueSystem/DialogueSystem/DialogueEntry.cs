@@ -11,6 +11,7 @@ namespace Scripts.DialogueSystem
         public bool SkipDialogue;
         public bool IsPlayerOption;
         public string DialogueText;
+        public NpcId NpcId;
         public Conditions Conditions;
         public Actions Actions;
         [Serialize] public List<int> ChildEntries;
