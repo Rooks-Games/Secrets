@@ -212,9 +212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisNPC: {fileID: 8665868950273539018}
-  npcType: 0
   charImage: {fileID: 3059456975610763776}
   charName: {fileID: 4025362476601312020}
+  npcType: 0
 --- !u!1 &7298255007712185252
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +284,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
+  m_sharedMaterial: {fileID: -5476781233770196193, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

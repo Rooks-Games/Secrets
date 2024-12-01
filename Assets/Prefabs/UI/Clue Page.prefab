@@ -104,8 +104,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'DETAILS:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
+  m_sharedMaterial: {fileID: -5476781233770196193, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -435,8 +435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ClueName
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
+  m_sharedMaterial: {fileID: -5476781233770196193, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -797,20 +797,13 @@ MonoBehaviour:
   currentClueObject:
     ClueName: 
     ClueDescription: 
-    BelongsTo:
-      NpcName: 
-      NpcIcon: {fileID: 0}
-      NpcDescription: 
-      CorrectClues: []
-      AddedClues: []
-      Loyalty: 0
-      NpcIdentifier: 0
     FoundORNotFound: 0
+    Selected: 0
   questionMarkImage: {fileID: 0}
   cluePageButtonNPC: {fileID: 0}
   cluePageButtonClue: {fileID: 1568683990326834205}
+  removeClueFromNPC: {fileID: 0}
   backButton: {fileID: 5813504139685348652}
-  boolSet: 0
 --- !u!1 &8083549352232097988
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,8 +986,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
+  m_sharedMaterial: {fileID: -5476781233770196193, guid: 1d0c5d2a9e7bd0b449c5e140c805db05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
