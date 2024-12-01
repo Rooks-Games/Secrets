@@ -7,16 +7,16 @@ using UnityEngine.UI;
 
 public class JournalManager : MonoBehaviour
 {
-    
+
     //Keep Info about the currently clicked tab
     public JournalState currJournalState = JournalState.NPC;
-    
+
     public Button NPC_btn, Clue_btn;
-    
+
     public List<UIScreen> allScreens = new List<UIScreen>();
-    
+
     Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
-    
+
     public List<NpcDetails> allNpcDetails = new List<NpcDetails>();
     public List<ClueDetails> allClueDetails = new List<ClueDetails>();
 
@@ -34,14 +34,14 @@ public class JournalManager : MonoBehaviour
         PopupText.text = text;
         StartCoroutine(PopUIFadeInOut());
     }
-    
+
     public void ClueFound(string ClueName)
     {
-        ClueDetails clueFound = allClueDetails.Find(x=>x.ClueName == ClueName);
+        ClueDetails clueFound = allClueDetails.Find(x => x.ClueName == ClueName);
         clueFound.FoundORNotFound = true;
         PopupHandler(clueFound.ClueName + " Found!");
     }
-    
+
     private IEnumerator PopUIFadeInOut()
     {
         while (colorAlphaVal > 0.5f)
@@ -51,6 +51,7 @@ public class JournalManager : MonoBehaviour
             yield return new WaitForSeconds(.33f);
             colorAlphaVal -= .16f;
         }
+
         PopupImage.color = new Color(1, 1, 1, 1.0f);
         PopupText.color = new Color(0, 0, 0, 1.0f);
         PopupImage.gameObject.SetActive(false);
@@ -61,10 +62,10 @@ public class JournalManager : MonoBehaviour
     {
         AddToUIStack(objScreen);
     }
-    
+
     public void AddToUIStack(UIScreen uiScreen)
     {
-        if(UIScreenStack.Count > 0)
+        if (UIScreenStack.Count > 0)
             UIScreenStack.Peek().Deactivate();
         UIScreenStack.Push(uiScreen);
         uiScreen.Activate();
@@ -75,18 +76,18 @@ public class JournalManager : MonoBehaviour
         UIScreenStack.Pop().Deactivate();
         UIScreenStack.Peek().Activate();
     }
-    
+
     public void AddToAllScreens(UIScreen uiScreen)
     {
         allScreens.Add(uiScreen);
     }
-    
+
     public void SetButtonAsPerCurrJournalState()
     {
         RectTransform NPCRectTransform = NPC_btn.GetComponent<RectTransform>();
         RectTransform ClueRectTransform = Clue_btn.GetComponent<RectTransform>();
         int height = 135, smallWidth = 145, largeWidth = 180;
-        
+
         if (currJournalState == JournalState.NPC)
         {
             Debug.Log("Setting up NPC Journal State!");
@@ -109,15 +110,16 @@ public class JournalManager : MonoBehaviour
     public void SetJournalState(int state)
     {
         Debug.Log("State Value: " + state);
-        switch( (JournalState)state ) // use upcast, where 0 - first, 1 - second...
+        switch ((JournalState)state) // use upcast, where 0 - first, 1 - second...
         {
-            case(JournalState.NPC):
+            case (JournalState.NPC):
                 currJournalState = JournalState.NPC;
                 break;
-            case(JournalState.Clue):
+            case (JournalState.Clue):
                 currJournalState = JournalState.Clue;
                 break;
         }
+
         Debug.Log("Curr Enum: " + currJournalState);
         SetButtonAsPerCurrJournalState();
     }
@@ -126,5 +128,6 @@ public class JournalManager : MonoBehaviour
 [Serializable]
 public enum JournalState
 {
-    NPC, Clue
+    NPC,
+    Clue
 }

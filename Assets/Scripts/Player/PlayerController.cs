@@ -9,6 +9,7 @@ namespace Scripts.Player
         [SerializeField] private Rigidbody2D _myRigidBody;
         [SerializeField] private float _movementSpeed;
         [SerializeField] private Animator _animator;
+        [SerializeField] private JournalManager _journalManager;
         private Vector2 _movement;
         private bool _isInDialogue;
 
@@ -80,7 +81,8 @@ namespace Scripts.Player
                     //Start Dialogue
                     break;
                 case InteractableObjectType.Clue:
-                    //Add Clue To 
+                    _journalManager.ClueFound(((InteractableClue)interactableObject).Id);
+                    Destroy(interactableObject);
                     break;
             }
         }
