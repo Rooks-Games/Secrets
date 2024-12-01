@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class NPCRecognition : MonoBehaviour
 {
     [SerializeField] Button thisNPC;
-    public Sprite charImage;
+    public Image charImage;
     public TMP_Text charName;
     
     public NpcId npcType;

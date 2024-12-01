@@ -48,7 +48,7 @@ public class AllNPCSelectionPage : UIScreen
         }*/
 
         npcRecognitionObject.charName.text = npcData.Name;
-        npcRecognitionObject.charImage = npcData.Image;
+        npcRecognitionObject.charImage.sprite = npcData.Image;
         npcRecognitionObject.npcType = npcData.id;
         npcRecognitionObject.BtnAddListener(() =>
         {
