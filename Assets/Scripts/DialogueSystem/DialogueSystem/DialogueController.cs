@@ -47,6 +47,7 @@ namespace Scripts.DialogueSystem
                 return false;
             }
 
+            PerformActionForDialogue(dialogueId);
             List<DialogueEntry> nextEntries = GetFilteredChildEntries(dialogueId);
             if (nextEntries.Count == 0)
             {
@@ -56,6 +57,7 @@ namespace Scripts.DialogueSystem
 
             while (nextEntries[0].SkipDialogue)
             {
+                PerformActionForDialogue(nextEntries[0].DialogueID);
                 nextEntries = GetFilteredChildEntries(dialogueId);
                 if (nextEntries.Count == 0)
                 {
