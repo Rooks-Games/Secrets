@@ -88,7 +88,7 @@ namespace Scripts.Player
                 transform.localScale = new Vector3(1, 1, 1);
             }
 
-            _myRigidBody.AddForce(_movement * _movementSpeed);
+            _myRigidBody.AddForce(_movement.normalized * _movementSpeed);
         }
 
         public void Interact()
