@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scripts.Npcs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,10 +18,10 @@ public class JournalManager : MonoBehaviour
 
     Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
 
-    public List<NpcDetails> allNpcDetails = new List<NpcDetails>();
+    public NpcDataProvider NpcDataProvider;
     public List<ClueDetails> allClueDetails = new List<ClueDetails>();
 
-    public NpcDetails selectedNpc;
+    public NpcData selectedNpc;
     public bool ActivateClueWithPlus = false;
 
     public Image PopupImage;

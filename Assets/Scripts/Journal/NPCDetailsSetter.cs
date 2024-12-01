@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Scripts.Npcs;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,13 +9,13 @@ using UnityEngine.UI;
 
 public class NPCDetailsSetter : UIScreen
 {
-    [SerializeField] private Image NPCIcon;
+    [SerializeField] private Sprite NPCIcon;
     [SerializeField] private TMP_Text NPCName;
     [SerializeField] private TMP_Text NPCDescription;
 
     [SerializeField] private Button backButton;
     
-    [SerializeField] private NpcDetails thisNPCDetails;
+    [SerializeField] private NpcData thisNPCDetails;
     
     [SerializeField] public List<ClueSetter> addedCluesButton = new();
 
@@ -26,15 +27,15 @@ public class NPCDetailsSetter : UIScreen
     private void OnEnable()
     {
         base.OnEnable();
-        if(thisNPCDetails.NpcName != "")
+        if(thisNPCDetails.Name != "")
             DataSetter(thisNPCDetails);
     }
     
-    public void DataSetter(NpcDetails currentNPCDetails)
+    public void DataSetter(NpcData currentNPCDetails)
     {
-        NPCIcon = currentNPCDetails.NpcIcon;
-        NPCName.text = currentNPCDetails.NpcName;
-        NPCDescription.text = currentNPCDetails.NpcDescription;
+        NPCIcon = currentNPCDetails.Image;
+        NPCName.text = currentNPCDetails.Name;
+        NPCDescription.text = currentNPCDetails.Description;
 
         if (currentNPCDetails.AddedClues.Count > 0)
         {

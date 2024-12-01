@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scripts.Npcs;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ConfrontNPC : MonoBehaviour
 {
-    [SerializeField] private NpcList npcToConfront;
+    [SerializeField] private NpcId npcToConfront;
     [SerializeField] Button confrontButton;
     JournalManager journalManager;
     
@@ -29,6 +30,6 @@ public class ConfrontNPC : MonoBehaviour
 
     public bool CanConfront()
     {
-        return journalManager.allNpcDetails.Find(a => a.NpcIdentifier == npcToConfront).AddedClues.Count > 0;
+        return journalManager.NpcDataProvider.NpcsData[npcToConfront].AddedClues.Count > 0;
     }
 }

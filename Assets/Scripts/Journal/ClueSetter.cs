@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scripts.Npcs;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class ClueSetter : UIScreen
     [SerializeField] private TMP_Text clueName;
     [SerializeField] private TMP_Text clueDescription;
 
-    [SerializeField] private NpcList currentNpcPage;
+    [SerializeField] private NpcId currentNpcPage;
     [SerializeField] private ClueDetails currentClueObject;
     
     [SerializeField] GameObject questionMarkImage;

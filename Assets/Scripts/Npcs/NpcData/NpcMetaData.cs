@@ -12,5 +12,7 @@ namespace Scripts.Npcs
         public string Name;
         public string Description;
         public string DialogueTreeId;
+        public List<ClueDetails> CorrectClues = new();
+        
     }
 }
