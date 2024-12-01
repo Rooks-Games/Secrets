@@ -9,7 +9,7 @@ namespace Scripts.Npcs
         [SerializeField] private NpcDatabase _npcDatabase;
         public Dictionary<NpcId, NpcData> NpcsData { get; private set; }
 
-        private void Start()
+        private void Awake()
         {
             NpcsData = new Dictionary<NpcId, NpcData>();
             for (int i = 0; i < _npcDatabase.NpcsData.Count; i++)

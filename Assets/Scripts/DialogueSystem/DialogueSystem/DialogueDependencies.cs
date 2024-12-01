@@ -7,5 +7,6 @@ namespace Scripts.DialogueSystem
     {
         public DialogueDatabase DialogueDatabase;
         public NpcDataProvider NpcDataProvider;
+        public ConfrontNPC ConfrontNPC;
     }
 }

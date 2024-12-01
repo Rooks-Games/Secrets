@@ -18,6 +18,7 @@ MonoBehaviour:
     SkipDialogue: 1
     IsPlayerOption: 0
     DialogueText: 
+    NpcId: 8
     Conditions: 0
     Actions: 0
     ChildEntries: 070000000500000006000000
@@ -25,6 +26,7 @@ MonoBehaviour:
     SkipDialogue: 0
     IsPlayerOption: 1
     DialogueText: Confront
+    NpcId: 8
     Conditions: 1
     Actions: 0
     ChildEntries: 0300000004000000
@@ -32,6 +34,7 @@ MonoBehaviour:
     SkipDialogue: 0
     IsPlayerOption: 1
     DialogueText: Leave
+    NpcId: 8
     Conditions: 1
     Actions: 0
     ChildEntries: 
@@ -43,6 +46,7 @@ MonoBehaviour:
       to keep my fields alive and my family fed. What\u2019s a few wilted crops or
       stolen produce compared to a whole town going hungry? You keep your mouth shut
       about this, and I\u2019ll make sure to have your back when the time comes."
+    NpcId: 8
     Conditions: 2
     Actions: 0
     ChildEntries: 
@@ -52,6 +56,7 @@ MonoBehaviour:
     DialogueText: "Huh? I don\u2019t know anything about that! Look, I\u2019ve got
       enough on my plate without you accusing me of things I\u2019ve never done.
       Go bother someone else!"
+    NpcId: 8
     Conditions: 0
     Actions: 0
     ChildEntries: 
@@ -61,6 +66,7 @@ MonoBehaviour:
     DialogueText: "Look, You\u2019ve been nothing but helpful so far. Kicking you
       out would be downright foolish, we need all the extra hands we can get. You\u2019ve
       got my vote for staying!."
+    NpcId: 8
     Conditions: 4
     Actions: 0
     ChildEntries: 
@@ -71,6 +77,7 @@ MonoBehaviour:
       like you\u2019ve been here for years. I don\u2019t trust a word outta your
       mouth, and I\u2019ll sleep better knowin\u2019 you\u2019re gone. My vote? Out
       with you!"
+    NpcId: 8
     Conditions: 5
     Actions: 0
     ChildEntries: 
@@ -83,6 +90,7 @@ MonoBehaviour:
       but there\u2019s no better reward than seeing the harvest come in. Say, if
       you ever need a fresh apple or some advice on growing your own, you come see
       me, alright?"
+    NpcId: 8
     Conditions: 6
     Actions: 0
     ChildEntries: 0100000002000000

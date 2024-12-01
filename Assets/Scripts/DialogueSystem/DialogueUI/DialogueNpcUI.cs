@@ -1,5 +1,6 @@
 using System;
 using Scripts.DialogueSystem;
+using Scripts.Npcs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,6 +10,7 @@ using Image = UnityEngine.UI.Image;
 public class DialogueNpcUI : MonoBehaviour
 {
     [SerializeField] private Image _npcImage;
+    [SerializeField] private TMP_Text _npcName;
     [SerializeField] private TMP_Text _dialogueText;
     [SerializeField] private Button _dialogueBox;
     
@@ -27,6 +29,9 @@ public class DialogueNpcUI : MonoBehaviour
     {
         _currentDialogue = dialogue;
         _dialogueText.SetText(_currentDialogue.DialogueText);
+        NpcData npcData = _dependencies.NpcDataProvider.NpcsData[dialogue.NpcId];
+        _npcImage.sprite = npcData.Image;
+        _npcName.text = npcData.Name;
     }
     
     public void ContinueDialogue()

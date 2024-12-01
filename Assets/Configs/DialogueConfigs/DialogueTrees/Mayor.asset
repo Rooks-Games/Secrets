@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7246dde06958743aa80da5610a121b, type: 3}
+  m_Name: Mayor
+  m_EditorClassIdentifier: 
+  Id: Mayor
+  DialogueEntries:
+  - DialogueID: 0
+    SkipDialogue: 1
+    IsPlayerOption: 0
+    DialogueText: 
+    NpcId: 12
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 070000000500000006000000
+  - DialogueID: 1
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Confront
+    NpcId: 12
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 0300000004000000
+  - DialogueID: 2
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Leave
+    NpcId: 12
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 3
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Now, now, you must have it all wrong. I haven\u2019t done anything
+      that isn\u2019t in the best interest of this town. Fine, yes, maybe I\u2019ve
+      set aside a little for... contingencies. Do you know how hard it is to keep
+      this place afloat? If I didn\u2019t plan ahead, this town would collapse. You
+      keep quiet about this, and I\u2019ll make sure no one questions your place
+      here."
+    NpcId: 12
+    Conditions: 2
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 4
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "What a ridiculous accusation. I\u2019m simply doing what\u2019s
+      best for this town, and keeping things on track for the future. If you have
+      any concerns, we can discuss them in the town hall meeting!"
+    NpcId: 12
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 5
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "You\u2019ve done nothing but contribute to our community since
+      your arrival. I see no reason to force you out. You should stay in my town,
+      help me manage it. Let\u2019s get along from now on."
+    NpcId: 12
+    Conditions: 4
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 6
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "I\u2019ve done everything in my power to keep this town prosperous,
+      and now I\u2019m being accused without proof? I won\u2019t stand for this.
+      I\u2019ll make sure you\u2019re removed from this place after the upcoming
+      town hall meeting!"
+    NpcId: 12
+    Conditions: 5
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 7
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Well, hello there! Welcome to our humble little town. As its leader,
+      I strive every day to keep things running smoothly for everyone here. It\u2019s
+      no easy task, mind you, but with everyone\u2019s support, we\u2019ve managed
+      to thrive. If there\u2019s anything you need, don\u2019t hesitate to let me
+      know."
+    NpcId: 12
+    Conditions: 6
+    Actions: 0
+    ChildEntries: 0100000002000000
