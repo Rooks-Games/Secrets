@@ -1,3 +1,4 @@
+using Map;
 using Scripts.Npcs;
 
 namespace Scripts.DialogueSystem
@@ -8,5 +9,6 @@ namespace Scripts.DialogueSystem
         public DialogueDatabase DialogueDatabase;
         public NpcDataProvider NpcDataProvider;
         public ConfrontNPC ConfrontNPC;
+        public GameController GmController;
     }
 }

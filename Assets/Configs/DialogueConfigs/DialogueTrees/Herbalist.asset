@@ -47,7 +47,7 @@ MonoBehaviour:
       town. Listen, let this one go and you\u2019ll have my gratitude."
     NpcId: 6
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
       well for you"
     NpcId: 6
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0

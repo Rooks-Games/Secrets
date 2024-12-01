@@ -59,7 +59,7 @@ MonoBehaviour:
       spreading these lies about me."
     NpcId: 7
     Conditions: 0
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       what you've done. Why don't we just all get along?."
     NpcId: 7
     Conditions: 4
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 6
     SkipDialogue: 0

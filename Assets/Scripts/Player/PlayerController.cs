@@ -14,6 +14,7 @@ namespace Scripts.Player
         [SerializeField] private DialogueSystem.DialogueSystem _dialogueSystem;
         private Vector2 _movement;
         private bool _isInDialogue;
+        public bool GameEnded;
 
         private void Awake()
         {
@@ -41,7 +42,7 @@ namespace Scripts.Player
 
         private void Update()
         {
-            if (_isInDialogue)
+            if (_isInDialogue || GameEnded)
             {
                 return;
             }

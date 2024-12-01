@@ -14,7 +14,8 @@ namespace Scripts.DialogueSystem
     public enum Actions
     {
         Undefined,
-        SetLoyalty
+        SetLoyalty,
+        SetDisLoyalty
     }
     
     public class DialogueHelper
@@ -51,6 +52,15 @@ namespace Scripts.DialogueSystem
         
         public void PerformActionForDialogueEntry(DialogueEntry dialogueEntry)
         {
+            switch (dialogueEntry.Actions)
+            {
+                case Actions.SetLoyalty:
+                    _dependencies.GmController.SetLoyal(1);
+                    break;
+                case Actions.SetDisLoyalty:
+                    _dependencies.GmController.SetLoyal(-1);
+                    break;
+            }
         }
     }
 }

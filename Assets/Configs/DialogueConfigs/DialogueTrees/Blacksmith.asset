@@ -46,7 +46,7 @@ MonoBehaviour:
       meet. You let this one go and I\u2019ll have your back whenever you need it."
     NpcId: 2
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       an honest man who works very hard to keep weapons that make this town safe."
     NpcId: 2
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0

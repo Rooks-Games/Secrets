@@ -58,7 +58,7 @@ MonoBehaviour:
       best for this town, and keeping things on track for the future. If you have
       any concerns, we can discuss them in the town hall meeting!"
     NpcId: 12
-    Conditions: 0
+    Conditions: 4
     Actions: 0
     ChildEntries: 
   - DialogueID: 5
@@ -69,7 +69,7 @@ MonoBehaviour:
       help me manage it. Let\u2019s get along from now on."
     NpcId: 12
     Conditions: 4
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 6
     SkipDialogue: 0

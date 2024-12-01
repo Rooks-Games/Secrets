@@ -48,7 +48,7 @@ MonoBehaviour:
       about this, and I\u2019ll make sure to have your back when the time comes."
     NpcId: 8
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
       Go bother someone else!"
     NpcId: 8
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0

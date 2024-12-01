@@ -49,7 +49,7 @@ MonoBehaviour:
       all fall apart."
     NpcId: 4
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
       you\u2019re wasting my time and slandering my name. Be careful where you tread."
     NpcId: 4
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0

@@ -58,7 +58,7 @@ MonoBehaviour:
       servant of the divine, tending to the souls of this town.
     NpcId: 9
     Conditions: 0
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
       I voice my opinion during the town hall meeting, we need people like you here."
     NpcId: 9
     Conditions: 4
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 6
     SkipDialogue: 0

@@ -47,7 +47,7 @@ MonoBehaviour:
       of mine and I\u2019ll have your back for the rest of your time here"
     NpcId: 3
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
       this won\u2019t bode well for you."
     NpcId: 3
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0

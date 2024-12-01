@@ -49,7 +49,7 @@ MonoBehaviour:
       it that you\u2019re safe here."
     NpcId: 10
     Conditions: 2
-    Actions: 0
+    Actions: 1
     ChildEntries: 
   - DialogueID: 4
     SkipDialogue: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
       You've got the wrong guy. I suggest you look elsewhere!
     NpcId: 10
     Conditions: 0
-    Actions: 0
+    Actions: 2
     ChildEntries: 
   - DialogueID: 5
     SkipDialogue: 0
