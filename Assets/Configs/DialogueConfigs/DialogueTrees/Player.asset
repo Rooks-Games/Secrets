@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7246dde06958743aa80da5610a121b, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  Id: Player
+  DialogueEntries:
+  - DialogueID: 0
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: From my sources, I can live a peaceful life in this town as long
+      as the residents of this town are happy with me. Good thing the people of this
+      town barely interact with outsiders. I might be able to survive here in this
+      town of secrets.
+    NpcId: 1
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 

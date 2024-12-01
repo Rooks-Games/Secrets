@@ -305,3 +305,9 @@ MonoBehaviour:
         On this paper we find the order of trading for an unusual list of items.
       FoundORNotFound: 0
       Selected: 0
+  - id: 1
+    Image: {fileID: 21300000, guid: d6820e631823d51409910644a98de8ea, type: 3}
+    Name: You
+    Description: The Player
+    DialogueTreeId: Player
+    CorrectClues: []
