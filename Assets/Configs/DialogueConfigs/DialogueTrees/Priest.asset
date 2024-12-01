@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7246dde06958743aa80da5610a121b, type: 3}
+  m_Name: Priest
+  m_EditorClassIdentifier: 
+  Id: Priest
+  DialogueEntries:
+  - DialogueID: 0
+    SkipDialogue: 1
+    IsPlayerOption: 0
+    DialogueText: 
+    NpcId: 9
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 070000000500000006000000
+  - DialogueID: 1
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Confront
+    NpcId: 9
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 0300000004000000
+  - DialogueID: 2
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Leave
+    NpcId: 9
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 3
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Dark magic? Such accusations are dangerous, my child. You do not
+      understand the weight of your words. Fine\u2026 yes, I\u2019ve done things\u2026
+      things that I regret, but all in the name of understanding the mysteries of
+      life and death. If you expose me, it will not only ruin me but shatter this
+      town\u2019s faith. Keep this between us, and I\u2019ll make sure to repay your
+      kindness in kind."
+    NpcId: 9
+    Conditions: 2
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 4
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: My child, you must have heard some terrible rumors. I am only a
+      servant of the divine, tending to the souls of this town.
+    NpcId: 9
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 5
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "You\u2019ve done nothing to harm us. To cast you out would be
+      unjust. I see no reason to doubt your intentions. I\u2019ll make sure that
+      I voice my opinion during the town hall meeting, we need people like you here."
+    NpcId: 9
+    Conditions: 4
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 6
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Such baseless accusations! You\u2019ve done nothing but bring
+      chaos to our town. You dare question my faith and my work? My vote is for you
+      to leave this place before more harm is done."
+    NpcId: 9
+    Conditions: 5
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 7
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Blessings upon you, child. The light of faith guides us all in
+      our darkest hours. If ever you feel lost, know that you are always welcome
+      within these walls. I am but a humble servant of the divine, doing what I can
+      to shepherd this town\u2019s souls toward peace and salvation."
+    NpcId: 9
+    Conditions: 6
+    Actions: 0
+    ChildEntries: 0100000002000000

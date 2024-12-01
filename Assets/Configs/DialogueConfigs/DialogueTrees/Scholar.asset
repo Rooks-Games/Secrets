@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7246dde06958743aa80da5610a121b, type: 3}
+  m_Name: Scholar
+  m_EditorClassIdentifier: 
+  Id: Scholar
+  DialogueEntries:
+  - DialogueID: 0
+    SkipDialogue: 1
+    IsPlayerOption: 0
+    DialogueText: 
+    NpcId: 11
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 070000000500000006000000
+  - DialogueID: 1
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Confront
+    NpcId: 11
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 0300000004000000
+  - DialogueID: 2
+    SkipDialogue: 0
+    IsPlayerOption: 1
+    DialogueText: Leave
+    NpcId: 11
+    Conditions: 1
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 3
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Ah, so you\u2019ve been poking around, have you? Look, the world
+      isn\u2019t as black-and-white as you might think. The knowledge I\u2019ve shared
+      has helped people far beyond this town, even if it\u2019s caused a few\u2026
+      complications here. You\u2019ve uncovered my secret, so let\u2019s make a deal:
+      You keep this quiet, and I\u2019ll make sure you\u2019ve got my full support
+      when you need it."
+    NpcId: 11
+    Conditions: 2
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 4
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "That\u2019s absurd. I\u2019ve never sold anything like that! I
+      only share information about the town\u2019s history and the curiosities I\u2019ve
+      studied. If you\u2019ve been hearing rumors, I suggest you stop entertaining
+      them. I\u2019m here to help, not harm."
+    NpcId: 11
+    Conditions: 0
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 5
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Greetings Friend, Casting out someone who\u2019s shown curiosity
+      and initiative would be a mistake. My vote is for you  to stay. They\u2019ve
+      done nothing to be scrutinized, I\u2019ll be on your side during the meeting."
+    NpcId: 11
+    Conditions: 4
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 6
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: Curiosity is a fine trait, but when paired with unfounded accusations,
+      it becomes dangerous. I cannot support someone so reckless. I believe you should
+      leave this town and its people alone.
+    NpcId: 11
+    Conditions: 5
+    Actions: 0
+    ChildEntries: 
+  - DialogueID: 7
+    SkipDialogue: 0
+    IsPlayerOption: 0
+    DialogueText: "Ah, the new arrival! Welcome. I suppose you\u2019ve already noticed
+      how quiet this place is. Still, knowledge is abundant here for those who seek
+      it. I\u2019m more than happy to share what I know\u2014though some mysteries
+      are best left undisturbed. Feel free to visit me if you have questions about
+      our town\u2019s history."
+    NpcId: 11
+    Conditions: 6
+    Actions: 0
+    ChildEntries: 0100000002000000
