@@ -35,6 +35,13 @@ public class JournalManager : MonoBehaviour
         StartCoroutine(PopUIFadeInOut());
     }
     
+    public void ClueFound(string ClueName)
+    {
+        ClueDetails clueFound = allClueDetails.Find(x=>x.ClueName == ClueName);
+        clueFound.FoundORNotFound = true;
+        PopupHandler(clueFound.ClueName + " Found!");
+    }
+    
     private IEnumerator PopUIFadeInOut()
     {
         while (colorAlphaVal > 0.5f)

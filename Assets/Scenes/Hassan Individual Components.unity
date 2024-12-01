@@ -1822,12 +1822,12 @@ MonoBehaviour:
     NpcIcon: {fileID: 0}
     NpcDescription: Forges weapons, tools, and horseshoes, supplying the townsfolk
       and travelers with metal goods. Known for their strength and skill with a hammer.
-    CorrectClues:
+    CorrectClues: []
+    AddedClues:
     - ClueName: 
       ClueDescription: 
       FoundORNotFound: 0
       Selected: 0
-    AddedClues: []
     Loyalty: 0
     NpcIdentifier: 0
   - NpcName: Innkeeper
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   allClueDetails:
   - ClueName: Clue 1
     ClueDescription: Clue 1
-    FoundORNotFound: 1
+    FoundORNotFound: 0
     Selected: 0
   - ClueName: Clue 2
     ClueDescription: Clue 2
@@ -3394,52 +3394,6 @@ MonoBehaviour:
   allCluePages: []
   allClueButtons: []
   backButton: {fileID: 1052042815}
---- !u!1 &1844221817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1844221818}
-  - component: {fileID: 1844221819}
-  m_Layer: 0
-  m_Name: ClueFound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1844221818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844221817}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1844221819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844221817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01fc633d695ebf844b469becde120ce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ClueName: 
-  journalManager: {fileID: 0}
 --- !u!1001 &1850432736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4084,5 +4038,4 @@ SceneRoots:
   - {fileID: 842105060}
   - {fileID: 533175347}
   - {fileID: 1226301960}
-  - {fileID: 1844221818}
   - {fileID: 2010173477}

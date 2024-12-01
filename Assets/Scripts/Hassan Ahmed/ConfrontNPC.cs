@@ -17,7 +17,7 @@ public class ConfrontNPC : MonoBehaviour
 
     public void Confront()
     {
-        if (journalManager.allNpcDetails.Find(a => a.NpcIdentifier == npcToConfront).AddedClues.Count > 0)
+        if (CanConfront())
         {
             //Can Confront!!
         }
@@ -25,5 +25,10 @@ public class ConfrontNPC : MonoBehaviour
         {
             //Can not confront!!
         }
+    }
+
+    public bool CanConfront()
+    {
+        return journalManager.allNpcDetails.Find(a => a.NpcIdentifier == npcToConfront).AddedClues.Count > 0;
     }
 }
