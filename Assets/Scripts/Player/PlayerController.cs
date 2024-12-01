@@ -109,7 +109,7 @@ namespace Scripts.Player
                     break;
                 case InteractableObjectType.Clue:
                     _journalManager.ClueFound(((InteractableClue)interactableObject).Id);
-                    Destroy(interactableObject);
+                    Destroy(interactableObject.gameObject);
                     break;
             }
         }

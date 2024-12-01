@@ -49,7 +49,7 @@ public class JournalManager : MonoBehaviour
 
     public void ClueFound(string ClueName)
     {
-        ClueDetails clueFound = allClueDetails.Find(x => x.ClueName == ClueName);
+        ClueDetails clueFound = allClueDetails.Find(x => x.ClueDescription == ClueName);
         clueFound.FoundORNotFound = true;
         PopupHandler(clueFound.ClueName + " Found!");
     }
