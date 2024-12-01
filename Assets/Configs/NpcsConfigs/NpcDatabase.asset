@@ -12,4 +12,296 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d0641ab23cfdc49bc5d51e062606e8, type: 3}
   m_Name: NpcDatabase
   m_EditorClassIdentifier: 
-  NpcsData: []
+  NpcsData:
+  - id: 8
+    Image: {fileID: 21300000, guid: a23400a16e806c34cbbfafa6d2448b2e, type: 3}
+    Name: Farmer
+    Description: A seasoned old man with a weathered face, sun-kissed skin, and hands
+      calloused from years of working the land. Dressed in sturdy overalls, he exudes
+      a humble yet steadfast demeanor. Despite his gruff exterior, he carries a quiet
+      wisdom and a fierce pride in his work, embodying the spirit of resilience and
+      tradition.
+    DialogueTreeId: Farmer
+    CorrectClues:
+    - ClueName: The damaged produce
+      ClueDescription: A shimmering light in the woods reveals a broken hoe stained
+        with soil and plant residue, seemingly used to tamper with crops. Its location
+        near the town outskirts suggests it could belong to the anyone who works
+        near the forest
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The damaged produce
+      ClueDescription: "Near the well, a shimmering light reveals a crate of unusually
+        fresh produce labeled for the market. It's suspiciously far from the Farmer\u2019s
+        fields, possibly pointing to stolen goods, but it could also implicate the
+        Mayor\u2019s connections."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The damaged produce
+      ClueDescription: ' A shimmering light in the marketplace reveals wilted produce
+        labeled as coming from a neighboring farm, accompanied by traces of a strange
+        powder suggesting foul play. The powder could point to the Farmer or the
+        Scholar, given their respective access to farming chemicals or knowledge
+        of poisons.'
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 10
+    Image: {fileID: 21300000, guid: c52d4a95179741645b869d2f9c5f90bd, type: 3}
+    Name: Town Crier
+    Description: "A lively and animated figure, known for his booming voice and theatrical
+      flair. Clad in a patched but colorful coat, they are always the center of attention.
+      With a knack for capturing the crowd\u2019s ear, they deliver news, decrees,
+      and stories with unmatched fervor, often embellishing details to keep the townsfolk
+      intrigued."
+    DialogueTreeId: Town Crier
+    CorrectClues:
+    - ClueName: Covering of debt
+      ClueDescription: A letter near the town square demands repayment of a debt,
+        with the sender's identity smudged. It is from the Mayor but for who?
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: Covering of debt
+      ClueDescription: You can listen to the town crier speak of the haunted mansion,
+        telling others to not go near it nor think of buying to because of the ghost
+        the resides in there. This mansion is slated to be bought by the mayor.
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: Covering of debt
+      ClueDescription: " A hidden drawer in the Town Crier\u2019s home reveals a
+        pouch of coins stamped with the Mayor\u2019s seal, suggesting financial dealings
+        between the two, but it could also suggest bribery or extortion."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 12
+    Image: {fileID: 21300000, guid: 5e38ef1ae2074754e8311c422a532cb1, type: 3}
+    Name: Mayor
+    Description: "A poised and confident figure, always impeccably dressed in fine
+      clothing. Their smooth demeanor and authoritative presence inspire respect\u2014or
+      perhaps fear\u2014among the townsfolk. With a sharp mind for diplomacy and
+      a knack for speaking with authority, the Mayor works tirelessly to maintain
+      order within the town."
+    DialogueTreeId: Mayor
+    CorrectClues:
+    - ClueName: Fight for the mansion
+      ClueDescription: "Construction materials stamped with the Mayor\u2019s emblem
+        are found near the woods, though the site\u2019s proximity to the Farmer\u2019s
+        fields creates doubt."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: Fight for the mansion
+      ClueDescription: You find a sign near the old haunted mansion that has had
+        no owner for some years due to a legal battle, that it has been newly bought
+        by someone.
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: Fight for the mansion
+      ClueDescription: "A shimmering light in the Mayor\u2019s private quarters reveals
+        a detailed blueprint of a mansion, with notes about \u201Curgent relocation.\u201D"
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 9
+    Image: {fileID: 21300000, guid: e068874329fb5944891a1423508f805b, type: 3}
+    Name: Priest
+    Description: A calming presence in the town, always seen with a gentle smile
+      and a soft, comforting voice. Dressed in simple yet dignified robes, they hold
+      a position of reverence in the community, offering solace to those in need.
+    DialogueTreeId: Priest
+    CorrectClues:
+    - ClueName: Is there a necromancer?
+      ClueDescription: Near the graveyard, a shimmering light uncovers a recently
+        disturbed grave with faint traces of black candle wax near the soil. This
+        could suggest that someone is sneaking around at night at the graveyard.
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: Is there a necromancer?
+      ClueDescription: "In the forest, near an old tree stump, a shimmering light
+        uncovers a half-burned book mentioning \u201Cshadows of the earth\u201D pointing
+        to the Priest or someone familiar with magic, like the Scholar."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 11
+    Image: {fileID: 21300000, guid: bf6e323420c5cfe4b8f3c865241e9668, type: 3}
+    Name: Scholar
+    Description: A figure of intrigue in the town, a quiet and studious individual
+      always seen with a book in hand or poring over ancient texts in their cluttered
+      study. They have an air of calm and wisdom, and many in the town rely on them
+      for information about history, folklore, and the mysteries of the land.
+    DialogueTreeId: Scholar
+    CorrectClues:
+    - ClueName: The Lost Information
+      ClueDescription: In the archives, a shimmering light reveals a ledger with
+        several pages missing. A faint imprint on one of the pages matches the shape
+        of an old tome often seen in the church, suggesting either the Scholar or
+        the Priest could be involved.
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Lost Information
+      ClueDescription: "In the Scholar\u2019s study, a shimmering light uncovers
+        a locked chest containing correspondence with an outsider who paid for \u201Cancient
+        wisdom.\u201D One letter references the Priest\u2019s interest in \u201Cancient
+        symbols,\u201D creating ambiguity about who might be working with whom."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Lost Information
+      ClueDescription: "In the town, a shimmering light reveals an old coin engraved
+        with markings not from the town, left near a stall that sells ink and parchment.
+        It\u2019s unclear if the coin is connected to the Scholar\u2019s dealings
+        or something traded by the Town Crier."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 2
+    Image: {fileID: 21300000, guid: dcbb6dea3bdcd3143b704d261228ad0b, type: 3}
+    Name: Blacksmith
+    Description: Forges weapons, tools, and horseshoes, supplying the townsfolk and
+      travelers with metal goods. Known for their strength and skill with a hammer.
+    DialogueTreeId: Blacksmith
+    CorrectClues:
+    - ClueName: The Unusual Insignia
+      ClueDescription: "Near the blacksmith\u2019s shop we find an unusual insignia
+        on a weapon, which belongs to a bandit group. This raises suspicion on whether
+        this weapon was created by the blacksmith, brought by the guard or sold by
+        the merchant."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Unusual Insignia
+      ClueDescription: "Near the captain's outpost, we see a bunch of weapons with
+        the same insignia in a box labelled bandit\u2019s weapons. Is the blacksmith
+        making these weapons but for who is he making them?"
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Unusual Insignia
+      ClueDescription: "Near the farmer\u2019s grounds you find a hidden ledger which
+        shows that the blacksmith has made an order for a bunch of weapons to be
+        sold. The person for whom it is but you can make out an unusual insignia
+        used as a wax seal."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 3
+    Image: {fileID: 21300000, guid: e7d7d5e6a7407954f81598f4ac529c95, type: 3}
+    Name: Innkeeper
+    Description: Runs the local inn, providing food, drink, and lodging. This person
+      hears all the local gossip and news from travelers passing through.
+    DialogueTreeId: Innkeeper
+    CorrectClues:
+    - ClueName: The Lost Information
+      ClueDescription: "Behind the Innkeeper\u2019s lodge we find a piece of torn
+        paper sticking out of the ground. It has the names of the residents slashed
+        out but you don\u2019t know who owns it."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Lost Information
+      ClueDescription: "Near the baker\u2019s shop you find a statement which states
+        that there is a person who is blackmailing the people in power for their
+        benefit. The person communicates with a lot of people on a daily basis."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Lost Information
+      ClueDescription: "Behind the town crier\u2019s house, we find a thrown out
+        diary. In the diary we find it written in muddled words on how the Innkeeper
+        keeps a list of secrets to blackmail people to get his work done."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 4
+    Image: {fileID: 21300000, guid: 3e813f238234977459ab1f1002f7246f, type: 3}
+    Name: Captain
+    Description: Responsible for keeping the peace and protecting the town from bandits
+      or other threats. Often works closely with the mayor or lord.
+    DialogueTreeId: Captain
+    CorrectClues:
+    - ClueName: The infamous raid
+      ClueDescription: "Near the Captain\u2019s outpost you find a new and barely
+        used shield hidden amongst the other used ones with a parchment of a date.
+        It\u2019s the same date as the infamous bandit raid that happened a couple
+        of years ago."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The infamous raid
+      ClueDescription: "Behind the town crier\u2019s house, we find a thrown out
+        diary. In the diary we find it written in muddled words on how one day the
+        captain was drunk and told him that he had abandoned his post before which
+        led to something terrible."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The infamous raid
+      ClueDescription: "Behind the innkeeper\u2019s lodge you find a badge with the
+        same date as the raid. Attached to it is a parchment which said, \u201Cit
+        all happened because you abandoned your post\u201D."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 5
+    Image: {fileID: 21300000, guid: 9f66319dd39f517418add41d8403953b, type: 3}
+    Name: Baker
+    Description: Prepares bread, pastries, and other baked goods each morning. The
+      bakery is often a hub of town life, with villagers gathering to catch up over
+      warm bread.
+    DialogueTreeId: Baker
+    CorrectClues:
+    - ClueName: The addictive plant
+      ClueDescription: "Behind the herbalist's shop you find a box of disposed plants
+        with a parchment that says, \u201CName: Longbottom Leaf. Uses: creating a
+        numbing sensation which oddly people find addicting.\u201D. I wonder who
+        uses it."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The addictive plant
+      ClueDescription: At the merchant shops we find a ledger that has the order
+        of this plant, but the name of the person who ordered is not visible. It
+        can either be the herbalist, scholar or the baker who is ordering these plants
+        because of the nature of this order.
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The addictive plant
+      ClueDescription: "At the baker\u2019s shop you find the plant in the back alongside
+        some of it chopped up and baked in the bread as well. Initially you don\u2019t
+        think much of it but find it peculiar how residents crave that bread so much."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 6
+    Image: {fileID: 21300000, guid: 1d6005141dfbdd04da6fe722c073e6c6, type: 3}
+    Name: Herbalist
+    Description: Uses plants, herbs, and old remedies to treat common ailments. Often
+      seen as a mysterious figure, possibly linked to older, mystical traditions.
+    DialogueTreeId: Herbalist
+    CorrectClues:
+    - ClueName: The Green Vial
+      ClueDescription: "Outside the scholar\u2019s shop we find a note on the use
+        of a new poison which is being used recently that looks like a green colour,
+        warning people to be careful."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Green Vial
+      ClueDescription: "Outside the scholar\u2019s shop we find a note on the use
+        of a new poison which is being used recently that looks like a green colour,
+        warning people to be careful."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The Green Vial
+      ClueDescription: "Behind the herbalist\u2019s shop we find disposed vials with
+        a green liquid in it, which seems to be corroding things around it."
+      FoundORNotFound: 0
+      Selected: 0
+  - id: 7
+    Image: {fileID: 21300000, guid: bcd690a65e42af64690fcbc297222b09, type: 3}
+    Name: Merchant
+    Description: Sells goods from other towns or cities, bringing in rare items,
+      spices, and textiles. Their market stall is a colorful place, full of strange
+      and exotic wares.
+    DialogueTreeId: Merchant
+    CorrectClues:
+    - ClueName: The illegal artifacts
+      ClueDescription: "Near the Captain\u2019s outpost, we see a box of goods. Inside
+        the box are some odd and peculiar artifacts. Who could these artifacts belong
+        to, I wonder."
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The illegal artifacts
+      ClueDescription: "In the far corner of the farmer\u2019s land we find another
+        artifact alongside the use of a crop which is deemed illegal in other towns.
+        Who could it be with the knowledge and means of acquiring such illegal items?"
+      FoundORNotFound: 0
+      Selected: 0
+    - ClueName: The illegal artifacts
+      ClueDescription: In the center of the town, we find a torn piece of paper.
+        On this paper we find the order of trading for an unusual list of items.
+      FoundORNotFound: 0
+      Selected: 0
