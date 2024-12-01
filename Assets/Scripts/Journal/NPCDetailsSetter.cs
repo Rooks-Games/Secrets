@@ -27,8 +27,10 @@ public class NPCDetailsSetter : UIScreen
     private void OnEnable()
     {
         base.OnEnable();
-        if(thisNPCDetails.Name != "")
-            DataSetter(thisNPCDetails);
+        if (thisNPCDetails != null)
+        {
+            DataSetter(journal.NpcDataProvider.NpcsData[thisNPCDetails.id]);
+        }
     }
     
     public void DataSetter(NpcData currentNPCDetails)

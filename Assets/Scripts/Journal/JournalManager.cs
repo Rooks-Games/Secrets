@@ -27,7 +27,18 @@ public class JournalManager : MonoBehaviour
     public Image PopupImage;
     public TMP_Text PopupText;
 
+    public GameObject CompleteJournal;
+    
     private float colorAlphaVal = 1.0f;
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            CompleteJournal.SetActive(!CompleteJournal.activeSelf);
+            SetJournalState(0);
+        }
+    }
 
     public void PopupHandler(string text)
     {

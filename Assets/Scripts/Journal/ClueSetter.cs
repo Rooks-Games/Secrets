@@ -95,13 +95,15 @@ public class ClueSetter : UIScreen
     {
         if (currentClueObject.Selected)
         {
-            journal.selectedNpc.AddedClues.Remove(currentClueObject);
             questionMarkImage.gameObject.SetActive(true);
             clueName.text = "";
             clueName.gameObject.SetActive(false);
             removeClueFromNPC.gameObject.SetActive(false);
             cluePageButtonNPC.gameObject.SetActive(true);
+            
             currentClueObject.Selected = false;
+            journal.NpcDataProvider.NpcsData[journal.selectedNpc.id].AddedClues.Remove(currentClueObject);
+            currentClueObject.ClueName = "";
         }
     }
 
@@ -109,9 +111,8 @@ public class ClueSetter : UIScreen
     {
         if (journal.ActivateClueWithPlus)
         {
-            journal.selectedNpc.AddedClues.Add(currentClueObject);
-            
             currentClueObject.Selected = true;
+            journal.NpcDataProvider.NpcsData[journal.selectedNpc.id].AddedClues.Add(currentClueObject);
             
             journal.ActivateClueWithPlus = false;
             journal.selectedNpc = null;
