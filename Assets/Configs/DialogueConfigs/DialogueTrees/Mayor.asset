@@ -48,7 +48,7 @@ MonoBehaviour:
       keep quiet about this, and I\u2019ll make sure no one questions your place
       here."
     NpcId: 12
-    Conditions: 2
+    Conditions: 5
     Actions: 0
     ChildEntries: 
   - DialogueID: 4
