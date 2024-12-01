@@ -103,7 +103,6 @@ public class ClueSetter : UIScreen
             
             currentClueObject.Selected = false;
             journal.NpcDataProvider.NpcsData[journal.selectedNpc.id].AddedClues.Remove(currentClueObject);
-            currentClueObject.ClueName = "";
         }
     }
 
