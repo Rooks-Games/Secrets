@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,33 @@ public class JournalManager : MonoBehaviour
 
     public NpcDetails selectedNpc;
     public bool ActivateClueWithPlus = false;
+
+    public Image PopupImage;
+    public TMP_Text PopupText;
+
+    private float colorAlphaVal = 1.0f;
+
+    public void PopupHandler(string text)
+    {
+        PopupImage.gameObject.SetActive(true);
+        PopupText.text = text;
+        StartCoroutine(PopUIFadeInOut());
+    }
+    
+    private IEnumerator PopUIFadeInOut()
+    {
+        while (colorAlphaVal > 0.5f)
+        {
+            PopupImage.color = new Color(1, 1, 1, colorAlphaVal);
+            PopupText.color = new Color(1, 1, 1, colorAlphaVal);
+            yield return new WaitForSeconds(.33f);
+            colorAlphaVal -= .16f;
+        }
+        PopupImage.color = new Color(1, 1, 1, 1.0f);
+        PopupText.color = new Color(0, 0, 0, 1.0f);
+        PopupImage.gameObject.SetActive(false);
+    }
+
 
     public void ActivateNPCIconPage(UIScreen objScreen)
     {
