@@ -15,7 +15,7 @@ namespace Scripts.Player
         private Vector2 _movement;
         private bool _isInDialogue;
 
-        private void Start()
+        private void Awake()
         {
             _dialogueSystem.ConversationStarted += ConversationStarted;
             _dialogueSystem.ConversationEnded += ConversationEnded;
