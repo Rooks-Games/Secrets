@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880c0c2b12b5abc458bb30d7632d8daf, type: 3}
   m_Name: DialogueDatabase
   m_EditorClassIdentifier: 
-  NpcIds:
-  - Farmer
   DialogueTrees:
+  - {fileID: 11400000, guid: 0a5fc508147fc304d8e1428bef1352e6, type: 2}
+  - {fileID: 11400000, guid: 29e3426a134b97b49a2c592c0cdd78cf, type: 2}
+  - {fileID: 11400000, guid: 661b046ad6c57e14094bbbee78237565, type: 2}
+  - {fileID: 11400000, guid: c697f93d10cf6b64d8d287bff2bb5d13, type: 2}
   - {fileID: 11400000, guid: 31e4a13064adb374580946c07ae3a625, type: 2}
+  - {fileID: 11400000, guid: 8e3112ebb23e48e46b2fe2f074d72f97, type: 2}
+  - {fileID: 11400000, guid: ab9add4efcbc5b845aec74aa02d99040, type: 2}
+  - {fileID: 11400000, guid: e009f9d985f5cb74aacb08398f114957, type: 2}
+  - {fileID: 11400000, guid: 528cd0bcd5349b44b8f98b0f9a138478, type: 2}
+  - {fileID: 11400000, guid: 9c4ce95b48fa61b489ae08f649f300ec, type: 2}
+  - {fileID: 11400000, guid: 012b903d18c32da479a169011b8917eb, type: 2}
