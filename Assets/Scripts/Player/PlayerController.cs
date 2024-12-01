@@ -1,3 +1,4 @@
+using System;
 using Scripts.Map;
 using UnityEngine;
 
@@ -10,8 +11,32 @@ namespace Scripts.Player
         [SerializeField] private float _movementSpeed;
         [SerializeField] private Animator _animator;
         [SerializeField] private JournalManager _journalManager;
+        [SerializeField] private DialogueSystem.DialogueSystem _dialogueSystem;
         private Vector2 _movement;
         private bool _isInDialogue;
+
+        private void Awake()
+        {
+            _dialogueSystem.ConversationStarted += ConversationStarted;
+            _dialogueSystem.ConversationEnded += ConversationEnded;
+        }
+        
+        private void OnDestroy()
+        {
+            _dialogueSystem.ConversationStarted -= ConversationStarted;
+            _dialogueSystem.ConversationEnded -= ConversationEnded;
+        }
+
+        private void ConversationStarted()
+        {
+            _animator.SetTrigger("Idle");
+            _isInDialogue = true;
+        }
+        
+        private void ConversationEnded()
+        {
+            _isInDialogue = false;
+        }
 
         private void Update()
         {
@@ -64,7 +89,7 @@ namespace Scripts.Player
                 transform.localScale = new Vector3(1, 1, 1);
             }
 
-            _myRigidBody.AddForce(_movement * _movementSpeed);
+            _myRigidBody.AddForce(_movement.normalized * _movementSpeed);
         }
 
         public void Interact()
@@ -78,7 +103,7 @@ namespace Scripts.Player
             switch (interactableObject.Type)
             {
                 case InteractableObjectType.Npc:
-                    //Start Dialogue
+                    _dialogueSystem.StartConversationWith(((InteractableNpc)interactableObject).Id);
                     break;
                 case InteractableObjectType.Clue:
                     _journalManager.ClueFound(((InteractableClue)interactableObject).Id);
