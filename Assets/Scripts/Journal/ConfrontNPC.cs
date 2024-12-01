@@ -28,20 +28,24 @@ public class ConfrontNPC : MonoBehaviour
         
         if (total == matched)
         {
+            npcData.Loyalty = 1;
             return true;
         }
         
         if (matched == 0)
         {
+            npcData.Loyalty = -1;
             return false;
         }
         
         int ans = UnityEngine.Random.Range(0, total + 1);
         if (ans <= matched)
         {
+            npcData.Loyalty = 1;
             return true;
         }
         
+        npcData.Loyalty = -1;
         return false;
     }
 
