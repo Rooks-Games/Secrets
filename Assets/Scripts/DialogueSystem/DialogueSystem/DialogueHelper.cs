@@ -2,12 +2,18 @@ namespace Scripts.DialogueSystem
 {
     public enum Conditions
     {
+        Undefined,
+        CanConfront,
         Confront,
-        CheckLoyalty
+        CheckLoyalty,
+        IsLoyal,
+        IsNotLoyal,
+        IsNeutral
     }
     
     public enum Actions
     {
+        Undefined,
         SetLoyalty
     }
     

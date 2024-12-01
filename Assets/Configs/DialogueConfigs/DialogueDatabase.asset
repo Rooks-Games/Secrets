@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DialogueDatabase
   m_EditorClassIdentifier: 
   NpcIds:
-  - test
+  - Farmer
   DialogueTrees:
-  - {fileID: 11400000, guid: 6b49455331d811341958f91fd115b62b, type: 2}
+  - {fileID: 11400000, guid: 31e4a13064adb374580946c07ae3a625, type: 2}
