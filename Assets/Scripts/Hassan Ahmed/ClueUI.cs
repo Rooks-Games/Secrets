@@ -1,47 +1,74 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class ClueUI : UIScreen
 {
     [SerializeField] ScrollRect cluesScrollRect;
     [SerializeField] GameObject clueButtonPrefab, clueButtonPage;
-    [SerializeField]List<ClueDetails> clues = new List<ClueDetails>();
-    
     [SerializeField]List<GameObject> allCluePages = new List<GameObject>();
+    [SerializeField]List<ClueButtonListener> allClueButtons = new List<ClueButtonListener>();
     
-    // Start is called before the first frame update
-    void Awake()
+    [SerializeField] private Button backButton;
+
+    private void Start()
     {
-        for (int i = 0; i < clues.Count; i++)
+        backButton.onClick.AddListener(journal.RemoveFromUIStack);
+    }
+
+    private void Awake()
+    {
+        for (int i = 0; i < journal.allClueDetails.Count; i++)
         {
             GameObject clueButtonObject = Instantiate(clueButtonPrefab, cluesScrollRect.content);
             ClueButtonListener clueButton = clueButtonObject.GetComponent<ClueButtonListener>();
-            string buttonTitleName = clues[i].ClueName;
-            clueButton.SetClueButtonText(buttonTitleName);
+            allClueButtons.Add(clueButton);
+            if (journal.allClueDetails[i].FoundORNotFound)
+            {
+                clueButton.ClueFound(journal.allClueDetails[i]);
+            }
+            else
+            {
+                clueButton.ClueNotFound();
+            }
             
             GameObject cluePageObject = Instantiate(clueButtonPage, MainJournalBG.transform);
             ClueSetter setterObject = cluePageObject.GetComponent<ClueSetter>();
-            
             setterObject.journal = journal;
             setterObject.MainJournalBG = MainJournalBG;
-            
-            setterObject.ClueSetterOnCluePage(clues[i]);
+            setterObject.ClueSetterOnCluePage(journal.allClueDetails[i]);
             
             clueButton.BtnAddListener(()=>
             {
                 cluePageObject.SetActive(true);
                 journal.AddToUIStack(cluePageObject.GetComponent<UIScreen>());
             });
-            
             cluePageObject.SetActive(false);
             allCluePages.Add(cluePageObject);
-            JournalManager.Instance.allScreens.Add(setterObject);
+            journal.AddToAllScreens(setterObject);
         }
+    }
+
+    // Start is called before the first frame update
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        for (int i = 0; i < allClueButtons.Count; i++)
+        {
+            ClueButtonListener clueButton = allClueButtons[i];
+            if (journal.allClueDetails[i].FoundORNotFound)
+            {
+                clueButton.ClueFound(journal.allClueDetails[i]);
+            }
+            else
+            {
+                clueButton.ClueNotFound();
+            }
+            clueButton.ClueSelectedState(journal.allClueDetails[i].Selected);
+        }
+
     }
     
     

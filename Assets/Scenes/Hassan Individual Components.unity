@@ -224,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &61196979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -906,101 +906,6 @@ MonoBehaviour:
   MainJournalBG: {fileID: 1145066354}
   listOfNPCs: []
   NPCPagePrefab: {fileID: 2038332410837657870, guid: 0695a3b0051e33348a7182bd04973e66, type: 3}
-  allNpcDetails:
-  - NpcName: Blacksmith
-    NpcIcon: {fileID: 0}
-    NpcDescription: Forges weapons, tools, and horseshoes, supplying the townsfolk
-      and travelers with metal goods. Known for their strength and skill with a hammer.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 0
-  - NpcName: Innkeeper
-    NpcIcon: {fileID: 0}
-    NpcDescription: Runs the local inn, providing food, drink, and lodging. This
-      person hears all the local gossip and news from travelers passing through.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 1
-  - NpcName: Town Guard
-    NpcIcon: {fileID: 0}
-    NpcDescription: Responsible for keeping the peace and protecting the town from
-      bandits or other threats. Often works closely with the mayor or lord.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 3
-  - NpcName: Baker
-    NpcIcon: {fileID: 0}
-    NpcDescription: Prepares bread, pastries, and other baked goods each morning.
-      The bakery is often a hub of town life, with villagers gathering to catch up
-      over warm bread.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 6
-  - NpcName: Herbalist
-    NpcIcon: {fileID: 0}
-    NpcDescription: Uses plants, herbs, and old remedies to treat common ailments.
-      Often seen as a mysterious figure, possibly linked to older, mystical traditions.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 4
-  - NpcName: Merchant
-    NpcIcon: {fileID: 0}
-    NpcDescription: Sells goods from other towns or cities, bringing in rare items,
-      spices, and textiles. Their market stall is a colorful place, full of strange
-      and exotic wares.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 7
-  - NpcName: Farmer
-    NpcIcon: {fileID: 0}
-    NpcDescription: "Grows crops and raises animals, providing food for the town.
-      Essential to the town\u2019s survival, they often live on the outskirts and
-      have a strong bond with the land."
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 8
-  - NpcName: Priest
-    NpcIcon: {fileID: 0}
-    NpcDescription: "A religious figure who leads the townspeople in worship, performs
-      rites, and provides spiritual guidance. They\u2019re respected but may have
-      their own agendas."
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 5
-  - NpcName: Town Crier
-    NpcIcon: {fileID: 0}
-    NpcDescription: Announces important news, decrees, and events to the townsfolk,
-      often gathering crowds with a loud bell and dramatic voice.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 2
-  - NpcName: Scholar
-    NpcIcon: {fileID: 0}
-    NpcDescription: Educated in reading and writing, they record town history, maintain
-      records, and may even teach children. Respected for their knowledge, they may
-      also act as an advisor.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 9
-  - NpcName: Mayor
-    NpcIcon: {fileID: 0}
-    NpcDescription: Leader of the town and responsible for the general well being
-      and the happiness of the people. They may appear wise and noble on the outside
-      but can have a corrupt side to them as well.
-    CorrectClues: []
-    AddedClues: []
-    Loyalty: 0
-    NpcIdentifier: 10
 --- !u!1 &533175344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2018,118 @@ MonoBehaviour:
   allScreens:
   - {fileID: 281583316}
   - {fileID: 1751046764}
+  allNpcDetails:
+  - NpcName: Blacksmith
+    NpcIcon: {fileID: 0}
+    NpcDescription: Forges weapons, tools, and horseshoes, supplying the townsfolk
+      and travelers with metal goods. Known for their strength and skill with a hammer.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 0
+  - NpcName: Innkeeper
+    NpcIcon: {fileID: 0}
+    NpcDescription: Runs the local inn, providing food, drink, and lodging. This
+      person hears all the local gossip and news from travelers passing through.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 1
+  - NpcName: Town Guard
+    NpcIcon: {fileID: 0}
+    NpcDescription: Responsible for keeping the peace and protecting the town from
+      bandits or other threats. Often works closely with the mayor or lord.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 3
+  - NpcName: Baker
+    NpcIcon: {fileID: 0}
+    NpcDescription: Prepares bread, pastries, and other baked goods each morning.
+      The bakery is often a hub of town life, with villagers gathering to catch up
+      over warm bread.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 6
+  - NpcName: Herbalist
+    NpcIcon: {fileID: 0}
+    NpcDescription: Uses plants, herbs, and old remedies to treat common ailments.
+      Often seen as a mysterious figure, possibly linked to older, mystical traditions.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 4
+  - NpcName: Merchant
+    NpcIcon: {fileID: 0}
+    NpcDescription: Sells goods from other towns or cities, bringing in rare items,
+      spices, and textiles. Their market stall is a colorful place, full of strange
+      and exotic wares.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 7
+  - NpcName: Farmer
+    NpcIcon: {fileID: 0}
+    NpcDescription: "Grows crops and raises animals, providing food for the town.
+      Essential to the town\u2019s survival, they often live on the outskirts and
+      have a strong bond with the land."
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 8
+  - NpcName: Priest
+    NpcIcon: {fileID: 0}
+    NpcDescription: "A religious figure who leads the townspeople in worship, performs
+      rites, and provides spiritual guidance. They\u2019re respected but may have
+      their own agendas."
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 5
+  - NpcName: Town Crier
+    NpcIcon: {fileID: 0}
+    NpcDescription: Announces important news, decrees, and events to the townsfolk,
+      often gathering crowds with a loud bell and dramatic voice.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 2
+  - NpcName: Scholar
+    NpcIcon: {fileID: 0}
+    NpcDescription: Educated in reading and writing, they record town history, maintain
+      records, and may even teach children. Respected for their knowledge, they may
+      also act as an advisor.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 9
+  - NpcName: Mayor
+    NpcIcon: {fileID: 0}
+    NpcDescription: Leader of the town and responsible for the general well being
+      and the happiness of the people. They may appear wise and noble on the outside
+      but can have a corrupt side to them as well.
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 10
+  allClueDetails:
+  - ClueName: Clue 1
+    ClueDescription: Clue 1
+    FoundORNotFound: 1
+    Selected: 0
+  - ClueName: Clue 2
+    ClueDescription: Clue 2
+    FoundORNotFound: 1
+    Selected: 0
+  selectedNpc:
+    NpcName: 
+    NpcIcon: {fileID: 0}
+    NpcDescription: 
+    CorrectClues: []
+    AddedClues: []
+    Loyalty: 0
+    NpcIdentifier: 0
   ActivateClueWithPlus: 0
 --- !u!4 &1226301960
 Transform:
@@ -8393,19 +8410,9 @@ MonoBehaviour:
   cluesScrollRect: {fileID: 2003638509}
   clueButtonPrefab: {fileID: 8255373773300517370, guid: 94bd754c4f3589a45aabc776250fc2fc, type: 3}
   clueButtonPage: {fileID: 7934284654000833807, guid: 185541b503666624d90e7f156b534519, type: 3}
-  clues:
-  - ClueName: Hassan
-    ClueDescription: Hassan
-    BelongsTo:
-      NpcName: 
-      NpcIcon: {fileID: 0}
-      NpcDescription: 
-      CorrectClues: []
-      AddedClues: []
-      Loyalty: 0
-      NpcIdentifier: 0
-    FoundORNotFound: 0
   allCluePages: []
+  allClueButtons: []
+  backButton: {fileID: 1052042815}
 --- !u!1001 &1850432736
 PrefabInstance:
   m_ObjectHideFlags: 0

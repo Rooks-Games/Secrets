@@ -9,6 +9,7 @@ public class ClueButtonListener : MonoBehaviour
 {
     [SerializeField] Button thisClueButton;
     [SerializeField] TMP_Text thisText;
+    [SerializeField] private GameObject QuestionMark;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,6 +22,25 @@ public class ClueButtonListener : MonoBehaviour
         thisClueButton.onClick.AddListener(btnAction);
     }
 
+    public void ClueFound(ClueDetails clueDetails)
+    {
+        QuestionMark.SetActive(false);
+        thisText.gameObject.SetActive(true);
+        thisClueButton.interactable = true;
+        SetClueButtonText(clueDetails.ClueName);
+    }
+    public void ClueNotFound()
+    {
+        QuestionMark.SetActive(true);
+        thisText.gameObject.SetActive(false);
+        thisClueButton.interactable = false;
+    }
+
+    public void ClueSelectedState(bool isSelected)
+    {
+        thisClueButton.interactable = !isSelected;
+    }
+    
     public void SetClueButtonText(string text)
     {
         thisText.text = text;

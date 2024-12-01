@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class JournalManager : MonoBehaviour
 {
-    public static JournalManager Instance; 
     
     //Keep Info about the currently clicked tab
     public JournalState currJournalState = JournalState.NPC;
@@ -16,33 +15,32 @@ public class JournalManager : MonoBehaviour
     public List<UIScreen> allScreens = new List<UIScreen>();
     
     Stack<UIScreen> UIScreenStack = new Stack<UIScreen>();
-
-    public bool ActivateClueWithPlus = false;
     
+    public List<NpcDetails> allNpcDetails = new List<NpcDetails>();
+    public List<ClueDetails> allClueDetails = new List<ClueDetails>();
 
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
+    public NpcDetails selectedNpc;
+    public bool ActivateClueWithPlus = false;
 
-    public void ActivateNPCIconPage()
+    public void ActivateNPCIconPage(UIScreen objScreen)
     {
-        AddToUIStack(gameObject.GetComponent<UIScreen>());
+        AddToUIStack(objScreen);
     }
     
     public void AddToUIStack(UIScreen uiScreen)
     {
+        if(UIScreenStack.Count > 0)
+            UIScreenStack.Peek().Deactivate();
         UIScreenStack.Push(uiScreen);
+        uiScreen.Activate();
     }
 
-    public void RemoveFromUIStack(UIScreen uiScreen)
+    public void RemoveFromUIStack()
     {
-        UIScreenStack.Pop();
+        UIScreenStack.Pop().Deactivate();
+        UIScreenStack.Peek().Activate();
     }
-
+    
     public void AddToAllScreens(UIScreen uiScreen)
     {
         allScreens.Add(uiScreen);
@@ -59,14 +57,17 @@ public class JournalManager : MonoBehaviour
             Debug.Log("Setting up NPC Journal State!");
             NPCRectTransform.sizeDelta = new Vector2(largeWidth, height);
             ClueRectTransform.sizeDelta = new Vector2(smallWidth, height);
-            allScreens[0].gameObject.SetActive(true);
+            ActivateClueWithPlus = false;
+            AddToUIStack(allScreens[0]);
+            //allScreens[0].gameObject.SetActive(true);
         }
         else
         {
             Debug.Log("Setting up Clue Journal State!");
             NPCRectTransform.sizeDelta = new Vector2(smallWidth, height);
             ClueRectTransform.sizeDelta = new Vector2(largeWidth, height);
-            allScreens[1].gameObject.SetActive(true);
+            AddToUIStack(allScreens[1]);
+            //allScreens[1].gameObject.SetActive(true);
         }
     }
 

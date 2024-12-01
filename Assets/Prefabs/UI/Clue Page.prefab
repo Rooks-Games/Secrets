@@ -789,11 +789,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8511122abc87cd347a9d976a0cf64885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  journal: {fileID: 0}
+  MainJournalBG: {fileID: 0}
   clueName: {fileID: 7583872090563772485}
   clueDescription: {fileID: 8089442074617793525}
-  clueHints: {fileID: 0}
+  currentNpcPage: 0
+  currentClueObject:
+    ClueName: 
+    ClueDescription: 
+    BelongsTo:
+      NpcName: 
+      NpcIcon: {fileID: 0}
+      NpcDescription: 
+      CorrectClues: []
+      AddedClues: []
+      Loyalty: 0
+      NpcIdentifier: 0
+    FoundORNotFound: 0
   questionMarkImage: {fileID: 0}
-  cluePageButton: {fileID: 1568683990326834205}
+  cluePageButtonNPC: {fileID: 0}
+  cluePageButtonClue: {fileID: 1568683990326834205}
+  backButton: {fileID: 5813504139685348652}
+  boolSet: 0
 --- !u!1 &8083549352232097988
 GameObject:
   m_ObjectHideFlags: 0

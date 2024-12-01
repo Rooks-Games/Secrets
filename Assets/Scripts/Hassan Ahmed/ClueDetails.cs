@@ -6,6 +6,6 @@ public class ClueDetails
 {
     public string ClueName;
     public string ClueDescription;
-    public NpcDetails BelongsTo = new NpcDetails();
     public bool FoundORNotFound = false;
+    public bool Selected = false;
 }

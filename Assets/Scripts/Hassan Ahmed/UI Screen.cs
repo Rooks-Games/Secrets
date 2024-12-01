@@ -10,7 +10,7 @@ public class UIScreen : MonoBehaviour
     
     //TODO: A List for each NPCs Clues
     
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         MainJournalBG = gameObject.GetComponentInParent<RectTransform>().gameObject;
         journal = GameObject.Find("Journal Manager").GetComponent<JournalManager>();
@@ -24,5 +24,11 @@ public class UIScreen : MonoBehaviour
     public void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void BackButton()
+    {
+        gameObject.SetActive(false);
+        journal.RemoveFromUIStack();
     }
 }

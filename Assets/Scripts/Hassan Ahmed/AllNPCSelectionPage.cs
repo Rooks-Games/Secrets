@@ -9,8 +9,6 @@ public class AllNPCSelectionPage : UIScreen
     public GameObject NPCPagePrefab;
     List<GameObject> allNPCsPages = new List<GameObject>();
     
-    [SerializeField] List<NpcDetails> allNpcDetails = new List<NpcDetails>();
-    
     private void Awake()
     {
         listOfNPCs = gameObject.GetComponentsInChildren<NPCRecognition>(true).ToList();
@@ -23,7 +21,7 @@ public class AllNPCSelectionPage : UIScreen
 
     private void Start()
     {
-        journal.ActivateNPCIconPage();
+        journal.ActivateNPCIconPage(this);
     }
 
     public void SetUIScreens(NPCRecognition npcRecognitionObject, int indexInList)
@@ -34,13 +32,18 @@ public class AllNPCSelectionPage : UIScreen
         GameObject NPCPageSpawned = Instantiate(NPCPagePrefab, MainJournalBG.transform);
         NPCPageSpawned.SetActive(false);
         
+        npcDetails = journal.allNpcDetails[indexInList];
         NPCPageSpawned.name = $"{npcDetails.NpcName}_NPCPage";
                 
         //Setup NPC Details object
-        npcDetails = allNpcDetails[indexInList];
                 
         setterForCurrentNPC = NPCPageSpawned.GetComponent<NPCDetailsSetter>();
         setterForCurrentNPC.DataSetter(npcDetails);
+
+        /*for (int i = 0 ; i < setterForCurrentNPC.addedCluesButton.Count; i++)
+        {
+            setterForCurrentNPC.addedCluesButton[i].AddImportantListeners();
+        }*/
 
         npcRecognitionObject.charName.text = npcDetails.NpcName;
         npcRecognitionObject.charImage = npcDetails.NpcIcon;
@@ -50,9 +53,9 @@ public class AllNPCSelectionPage : UIScreen
             NPCPageSpawned.SetActive(true);
             journal.AddToUIStack(NPCPageSpawned.GetComponent<UIScreen>());
         });
-                
+        
         allNPCsPages.Add(NPCPageSpawned);
-        JournalManager.Instance.allScreens.Add(setterForCurrentNPC);
+        journal.AddToAllScreens(setterForCurrentNPC);
     }
 }
 
