@@ -29,6 +29,7 @@ namespace Scripts.Player
 
         private void ConversationStarted()
         {
+            _movement = Vector2.zero;
             _animator.SetTrigger("Idle");
             _isInDialogue = true;
         }
@@ -71,7 +72,7 @@ namespace Scripts.Player
                 Interact();
             }
 
-            if (_movement.magnitude>0)
+            if (_movement.magnitude > 0 && !_isInDialogue)
             {
                 _animator.SetTrigger("Walk");
             }
