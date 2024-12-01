@@ -58,10 +58,9 @@ MonoBehaviour:
   - DialogueID: 5
     SkipDialogue: 0
     IsPlayerOption: 0
-    DialogueText: "I don\u2019t see what the fuss is about. This newcomer\u2019s
-      been nothing but helpful so far. Kicking \u2018em out would be downright foolish,
-      we need all the extra hands we can get. You\u2019ve got my vote to let \u2018em
-      stay."
+    DialogueText: "Look, You\u2019ve been nothing but helpful so far. Kicking you
+      out would be downright foolish, we need all the extra hands we can get. You\u2019ve
+      got my vote for staying!."
     Conditions: 4
     Actions: 0
     ChildEntries: 
@@ -71,7 +70,7 @@ MonoBehaviour:
     DialogueText: "Well, ain\u2019t that rich? You march in here, slinging accusations
       like you\u2019ve been here for years. I don\u2019t trust a word outta your
       mouth, and I\u2019ll sleep better knowin\u2019 you\u2019re gone. My vote? Out
-      with \u2018em!"
+      with you!"
     Conditions: 5
     Actions: 0
     ChildEntries: 
