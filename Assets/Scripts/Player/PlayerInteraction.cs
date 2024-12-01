@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Scripts.Map;
 using UnityEngine;
@@ -24,7 +25,7 @@ namespace Scripts.Player
             _currentInteractableObjects = new List<InteractableObject>();
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out InteractableObject interactableObject))
             {
@@ -33,7 +34,7 @@ namespace Scripts.Player
             }
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out InteractableObject interactableObject))
             {

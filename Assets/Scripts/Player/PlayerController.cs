@@ -7,7 +7,8 @@ namespace Scripts.Player
     {
         [SerializeField] private PlayerInteraction _playerInteractionProvider;
         [SerializeField] private Rigidbody2D _myRigidBody;
-        private float _movementSpeed;
+        [SerializeField] private float _movementSpeed;
+        [SerializeField] private Animator _animator;
         private Vector2 _movement;
         private bool _isInDialogue;
 
@@ -42,6 +43,24 @@ namespace Scripts.Player
             if (Input.GetKey(KeyCode.E))
             {
                 Interact();
+            }
+
+            if (_movement.magnitude>0)
+            {
+                _animator.SetTrigger("Walk");
+            }
+            else
+            {
+                _animator.SetTrigger("Idle");
+            }
+
+            if (_movement.x > 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (_movement.x < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
             }
 
             _myRigidBody.AddForce(_movement * _movementSpeed);
